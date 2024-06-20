@@ -12,12 +12,12 @@
     }
 		/*Insert Data in Tables*/
 		public function f_insert($table_name, $data_array) {
-
-			$this->db->insert($table_name, $data_array);
-
-			return;
-
-		}
+            $this->db->trans_start();
+            $this->db->insert($table_name, $data_array);
+            $id =$this->db->insert_id();
+            $this->db->trans_complete();
+            return $id;
+        }
 																				/*Update table data*/
 		public function f_edit($table_name, $data_array, $where) {
 

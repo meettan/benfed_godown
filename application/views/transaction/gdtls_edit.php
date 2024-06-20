@@ -1,26 +1,26 @@
 <div class="wraper">
-    <form method="POST" id="product" action="<?php echo site_url("godown/godown/godowndtls") ?>" enctype='multipart/form-data'>
-        <div class="col-md-6 container form-wraper" style="margin-bottom: 10px!important;">
+    <!-- <form method="POST" id="product" action="<?php //echo site_url("godown/godown/godowndtls") ?>" enctype='multipart/form-data'> -->
+        <div class="col-md-6 container form-wraper" style="margin-bottom: 10px!important;" >
             <div class="form-header">
 
                 <h4>Godown Details</h4>
 
             </div>
-          
+
             <div class="form-group row">
 
                 <label for="yr" class="col-sm-2 col-form-label">WareHouse Name:</label>
                 <div class="col-sm-10">
                    
 
-                    <input type="text" id=w_name name="w_name" class="form-control"  required/>
+                    <input type="text" id=w_name name="w_name" class="form-control" value="<?=$wearhouse->w_name ? $wearhouse->w_name : ''?>" required/>
 
                 </div>
                 </div>
                 <div class="form-group row">
                 <label for="w_addrs" class="col-sm-2 col-form-label">WareHouse Address:</label>
                 <div class="col-sm-10">
-                <textarea id=w_addrs name="w_addrs" class="form-control"></textarea>
+                <textarea id=w_addrs name="w_addrs" class="form-control"><?=$wearhouse->w_addrs ? $wearhouse->w_addrs : ''?></textarea>
 
                 </div>
 
@@ -33,7 +33,7 @@
                         <?php
                         foreach ($gdstat as $gdst) {
                         ?>
-                            <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
+                            <option value="<?php echo $gdst->id; ?>" <?=($gdst->id == $wearhouse->status) ? 'selected' : ''?>><?php echo $gdst->gd_status; ?></option>
                         <?php
                             }
                         ?>
@@ -49,7 +49,7 @@
                         <?php
                         foreach ($purpdtls as $purp) {
                         ?>
-                            <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+                            <option value="<?php echo $purp->id; ?>" <?=($gdst->id == $wearhouse->purpose) ? 'selected' : ''?>><?php echo $purp->purpose; ?></option>
                         <?php
                         }
                         ?>
@@ -61,7 +61,7 @@
             <div class="form-group row">
                 <label for="capacity" class="col-sm-2 col-form-label">Capacity:</label>
                 <div class="col-sm-4">
-                    <input type="text" id=capacity name="capacity" class="form-control required"  />
+                    <input type="text" id=capacity name="capacity" class="form-control required"  value="<?=$wearhouse->capacity ? $wearhouse->capacity : ''?>" />
 
                 </div>
             
@@ -74,11 +74,10 @@
                     <?php
                     foreach ($locdtls as $loc) {
                     ?>
-                        <option value="<?php echo $loc->id; ?>"><?php echo $loc->loc_name; ?></option>
+                        <option value="<?php echo $loc->id; ?>" <?=($gdst->id == $wearhouse->location) ? 'selected' : ''?>><?php echo $loc->loc_name; ?></option>
                 <?php
                 }
             ?>
-
                </select>
                 </div>
             </div>
@@ -86,7 +85,7 @@
             <div class="form-group row">
                 <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent start sate:</label>
                 <div class="col-sm-4">
-                    <input type="date" id=rent_st_dt name="rent_st_dt" class="form-control required"  />
+                    <input type="date" id=rent_st_dt name="rent_st_dt" class="form-control required" value="<?=$wearhouse->rent_st_dt ? $wearhouse->rent_st_dt : ''?>" />
 
                 </div>
                 
@@ -94,7 +93,7 @@
             <div class="form-group row"> -->
                 <label for="rent_end_dt" class="col-sm-2 col-form-label">Rent End date:</label>
                 <div class="col-sm-4">
-                    <input type="date" id=rent_end_dt name="rent_end_dt" class="form-control required"  />
+                    <input type="date" id=rent_end_dt name="rent_end_dt" class="form-control required"  value="<?=$wearhouse->rent_end_dt ? $wearhouse->rent_end_dt : ''?>"/>
 
                 </div>
             </div>
@@ -102,37 +101,37 @@
             <div class="form-group row">
                 <label for="onholdv" class="col-sm-2 col-form-label">Rent Duration:</label>
                 <div class="col-sm-4">
-                    <input type="text" id=rent_duration name="rent_duration" class="form-control required"  />
+                    <input type="text" id=rent_duration name="rent_duration" class="form-control required" value="<?=$wearhouse->rent_duration ? $wearhouse->rent_duration : ''?>" />
 
                 </div>
             <!-- </div>
             <div class="form-group row"> -->
                 <label for="rate" class="col-sm-2 col-form-label">rate:</label>
                 <div class="col-sm-4">
-                    <input type="text" id=rate name="rate" class="form-control required"  />
+                    <input type="text" id=rate name="rate" class="form-control required" value="<?=$wearhouse->rate ? $wearhouse->rate : ''?>" />
 
                 </div>
             </div>
             <div class="form-group row">
                 <label for="monthly_remt_amt" class="col-sm-2 col-form-label">Monthly rent amount:</label>
                 <div class="col-sm-10">
-                    <input type="text" id=monthly_remt_amt name="monthly_remt_amt" class="form-control required"  />
+                    <input type="text" id=monthly_remt_amt name="monthly_remt_amt" class="form-control required" value="<?=$wearhouse->monthly_remt_amt ? $wearhouse->monthly_remt_amt : ''?>" />
 
                 </div>
             </div>
             <div class="form-group row">
                 <label for="to_whome" class="col-sm-2 col-form-label">To Whome:</label>
                 <div class="col-sm-10">
-                    <input type="text" id=to_whome name="to_whome" class="form-control required"  />
+                    <input type="text" id=to_whome name="to_whome" class="form-control required" value="<?=$wearhouse->to_whome ? $wearhouse->to_whome : ''?>" />
 
                 </div>
             </div>
             
             <div class="form-group row">
-                <label for="remarks" class="col-sm-2 col-form-label">Rearks:</label>
+                <label for="remarks" class="col-sm-2 col-form-label">Remarks:</label>
                 <div class="col-sm-10">
 
-                    <textarea id=remarks name="remarks" class="form-control"></textarea>
+                    <textarea id=remarks name="remarks" class="form-control"><?=$wearhouse->remarks ? $wearhouse->remarks : ''?></textarea>
                 </div>
             </div>
           
@@ -150,21 +149,24 @@
 
                 <table class="table">
                     <thead>
-                    <tr><th>Document Name</th><th>Document.(PDF, Size upto 2MB)</th><th></th></tr>
+                    <tr><th>Document Name</th><th>(PDF, Size upto 2MB)</th><th>
+                        <!-- <button type="button" class="btn btn-success addAnotherrow"><i class="fa fa-plus"></i></button> -->
+                </th></tr>
                     </thead>
                     <tbody id="intro2">
-                    <tr>
-                        <td><input type="text" name="name[]" class="form-control"></td>
-                        <td><input type="file" name="fileToUpload[]" class="form-control doc"></td>
-                        <td><button type="button" class="btn btn-success addAnotherrow"><i class="fa fa-plus"></i></button></td>
-                    </tr>
-                    
+                        <?php foreach($docs as $doc) { ?>
+                     <tr>
+                        <td><?=$doc->file_name ? $doc->file_name : ''?></td>
+                        <td><a href="<?=base_url()?>uploads/godown_doc/<?=$doc->document ? $doc->document : ''?>" download>Download</a></td>
+                        
+                     </tr>
+                    <?php } ?>
                 </tbody>
                 </table>
         </div>
 
         <div class="col-md-12">
-        <input type="submit" id="submit" class="btn btn-info" value="Save" />
+        <!-- <input type="submit" id="submit" class="btn btn-info" value="Save" /> -->
 
         </div>
     </form>

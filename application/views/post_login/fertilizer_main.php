@@ -262,18 +262,14 @@
                         <?php } ?>
 
                         <?php if( $this->session->userdata['loggedin']['ho_flag']=="Y"){?> 
-                            <div class="dropdown-content">
+                            <div class="dropdown-content"> 
                             <!-- <a href="<?php echo site_url("adv/company_advance");?>">Advance To Company</a>
                             <a href="<?php echo site_url("adv/company_advance_pending");?>">Pending Advance To Company</a> -->
 
                             <div class="sub-dropdown">
                             <a href="<?php echo site_url("uplfl");?>">File Upload</a>
-                            <a href="<?php echo site_url("gddls");?>">Godown Details</a>
-                               <!-- <a class="sub-dropbtn">Advance To Company<i class="fa fa-angle-right" style="float: right;"></i></a>  -->
-                               <!-- <div class="sub-dropdown-content">
-                               <a href="<?php echo site_url("adv/company_advance");?>">Advance To Company</a>
-                               <a href="<?php echo site_url("adv/company_advance_pending");?>">Pending Advance To Company</a>
-                                </div> -->
+                            <a href="<?php echo site_url("godown/godown/");?>">Godown Details</a>
+                              
                             </div>
 
                             <!-- <div class="sub-dropdown">
