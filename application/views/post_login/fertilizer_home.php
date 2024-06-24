@@ -274,10 +274,10 @@ if($this->session->userdata['loggedin']['ho_flag']=="Y")
         </div>
 
         <div class="sectionNew">
-          <div class="col-sm-12">
+          <!-- <div class="col-sm-12">
             <h2 class="onClickOpen" onclick="expandDiv()">Company Wise Status <span>(Click to Expand)</span> <i
                 class="fa fa-arrow-circle-down" aria-hidden="true"></i></h2>
-          </div>
+          </div> -->
           <div class="col-sm-12 accordianConten accoNotShow">
             <div class="companyWisSec">
               <div class="table-responsive tableFullWidth">
@@ -683,9 +683,9 @@ $tot_lqd = 0.00;
               <div class="threeBoxImg yellowCol"><img src="<?=base_url()?>assets/images/boxIcon_b.png" alt=""></div>
               <div class="threeBoxTxt">
                 <h2>Sale For The Day</h2>
-                <p class="price"><span class="mt"><?php echo round($totsolidsale->qty,2);?><strong> MT</strong></span>
+                <!-- <p class="price"><span class="mt"><?php echo round($totsolidsale->qty,2);?><strong> MT</strong></span>
                   <span class="mt2"><?php echo round($totliquidsale->qty,2);?><strong> LTR</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> -->
                     </strong><?=round($ho_recvamt_day->tot_recvamt,3)?></span></p>
               </div>
             </div>
@@ -1071,10 +1071,10 @@ $tot_lqd = 0.00;
         </div><?php */?>
 
         <div class="sectionNew">
-          <div class="col-sm-12">
+          <!-- <div class="col-sm-12">
             <h2 class="onClickOpen">Overdue List <span>(Click to Expand)</span> <i class="fa fa-arrow-circle-down"
                 aria-hidden="true"></i></h2>
-          </div>
+          </div> -->
 
           <div class="col-sm-12 accordianConten accoNotShow">
             <div class="companyWisSec">

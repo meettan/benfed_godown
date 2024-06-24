@@ -27,7 +27,7 @@
           <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/salerep">Sale Ledger</a></li>
           <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/cust_payblepaid">Due Register</a></li>
           <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/soc_ledger">Society Ledger</a></li>
-          <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/overdue_list">Overdue List</a></li>
+          <!-- <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/overdue_list">Overdue List</a></li> -->
         </ul>
       </div>
     </div>

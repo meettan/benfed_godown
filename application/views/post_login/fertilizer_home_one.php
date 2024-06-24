@@ -116,23 +116,27 @@
 
                         if ($this->session->userdata['loggedin']['ho_flag'] == "Y")   //When user in Headoffice
                         {
-                          echo $ho_purchase_daysld;
+                          // echo $ho_purchase_daysld;
+                          echo '';
                         } else {                                                  //When user in Branhoffice
-                          echo $purchase_day->tot_purchase;
+                          // echo $purchase_day->tot_purchase;
+                          echo '';
                         }
                         ?>
-                        <strong>MT</strong></span>
+                        <!-- <strong>MT</strong></span> -->
 
                       <span class="lit">
                         <?php                                                             //Liquid
                         if ($this->session->userdata['loggedin']['ho_flag'] == "Y") {     //When user in Headoffice
 
-                          echo $ho_purchase_daylqd;
+                          // echo $ho_purchase_daylqd;
+                          echo '';
                         } else {                                                        //When user in Branhoffice
-                          echo $purchase_day->tot_purchase;
+                          // echo $purchase_day->tot_purchase;
+                          echo '';
                         }
                         ?>
-                        <strong>L</strong>
+                        <!-- <strong>L</strong> -->
                       </span>
                     </p>
                   </div>
@@ -143,18 +147,23 @@
 
               <div class="col-sm-4 float-left">
                 <div class="threeBoxNewSmall">
-                  <div class="threeBoxImg yellowCol"><img src="<?= base_url() ?>assets/images/boxIcon_b_new.png" alt=""></div>
+                  <div class="threeBoxImg yellowCol">
+                    <!-- <img src="<?= base_url() ?>assets/images/boxIcon_b_new.png" alt=""> -->
+                  </div>
                   <div class="threeBoxTxt">
                     <!-- <h2>Sale For The Day</h2> -->
                     <p class="price"><span class="mt"><?php                               //Solid
                                                       if ($this->session->userdata['loggedin']['ho_flag'] == "Y")      //User in HO
                                                       {
 
-                                                        echo $ho_sale_daysld;
+                                                        // echo $ho_sale_daysld;
+                                                        echo '';
                                                       } else {                                                        //In Branch
-                                                        echo $sale_day->tot_sale;
+                                                        // echo $sale_day->tot_sale;
+                                                        echo '';
                                                       }
-                                                      ?><strong>MT</strong></span>
+                                                      ?>
+                                                      <!-- <strong>MT</strong></span> -->
                       <span class="lit"><?php                                          //Liquid
                                         if ($this->session->userdata['loggedin']['ho_flag'] == "Y")       //User in Ho
                                         {
@@ -162,7 +171,8 @@
                                         } else {                                                         //user in branch
                                           echo $sale_day->tot_sale;
                                         }
-                                        ?> <strong>L</strong></span>
+                                        ?> 
+                                        <!-- <strong>L</strong></span> -->
                     </p>
                   </div>
                 </div>
@@ -236,8 +246,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Day Purchase</h3> -->
                       <div class="valueSec">
-                        <span class="mt"><span id="dp">0.00</span> <strong>MT</strong></span>
-                        <span class="lit"><span id="dpl">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt"><span id="dp">0.00</span> <strong>MT</strong></span>
+                        <span class="lit"><span id="dpl">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -245,8 +255,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Day Sale </h3> -->
                       <div class="valueSec">
-                        <span class="mt"><span id="ds">0.00</span> <strong>MT</strong></span>
-                        <span class="lit"><span id="dsl">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt"><span id="ds">0.00</span> <strong>MT</strong></span>
+                        <span class="lit"><span id="dsl">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -268,8 +278,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Monthly Purchase </h3> -->
                       <div class="valueSec">
-                        <span class="mt" id=""><span id="dpm">0.00</span> <strong>MT</strong></span>
-                        <span class="lit" id=""><span id="dpmlqd">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt" id=""><span id="dpm">0.00</span> <strong>MT</strong></span>
+                        <span class="lit" id=""><span id="dpmlqd">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -277,8 +287,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Monthly Sale </h3> -->
                       <div class="valueSec">
-                        <span class="mt" id=""><span id="sm">0.00</span> <strong>MT</strong></span>
-                        <span class="lit" id=""><span id="smlqd">0.00</span><strong>L</strong></span>
+                        <!-- <span class="mt" id=""><span id="sm">0.00</span> <strong>MT</strong></span>
+                        <span class="lit" id=""><span id="smlqd">0.00</span><strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -300,8 +310,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Yearly Purchase </h3> -->
                       <div class="valueSec">
-                        <span class="mt" id=""><span id="pyr">0.00</span> <strong>MT</strong></span>
-                        <span class="lit" id=""><span id="pyrlq">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt" id=""><span id="pyr">0.00</span> <strong>MT</strong></span>
+                        <span class="lit" id=""><span id="pyrlq">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -309,8 +319,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Yearly Sale </h3> -->
                       <div class="valueSec">
-                        <span class="mt" id=""><span id="syr">0.00</span> <strong>MT</strong></span>
-                        <span class="lit" id=""><span id="syrlq">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt" id=""><span id="syr">0.00</span> <strong>MT</strong></span>
+                        <span class="lit" id=""><span id="syrlq">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -440,10 +450,10 @@
             <div style="text-align:center;">
 
               <h2>
-                <form action="<?php echo site_url("fert/rep/overdue_list") ?>" method="post">
+                <!-- <form action="<?php echo site_url("fert/rep/overdue_list") ?>" method="post">
                   <input type="hidden" name="from_date" value="<?= date('Y-m-d') ?>">
                   Overdue List <button type="submit" class="btn btn-primary btn-lg">Generate</button>
-                </form>
+                </form> -->
               </h2>
 
             </div>
@@ -469,8 +479,8 @@
             <div class="sectionNew">
               <div class="stockPointSecTitle">
                 <div class="col-sm-12">
-                  <h2>Company Wise Status</h2>
-                  <div class="selectBox">
+                  <!-- <h2>Company Wise Status</h2> -->
+                  <!-- <div class="selectBox">
                     <select name="company_dtls" class="form-control district" id="company_dtls">
                       <option value="">Select Company</option>
                       <?php
@@ -481,7 +491,7 @@
                       }
                       ?>
                     </select>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -489,7 +499,7 @@
 
             <div class="col-sm-12">
               <div class="districWisSec">
-                <div class="districWisSecLeft districWisSecLeft_FullWidth">
+                <!-- <div class="districWisSecLeft districWisSecLeft_FullWidth">
                   <ul>
 
                     <li><a href="javascript:void(0)" class="brdaypurchasec" onclick="brdaypurchasec(339)">Bankura<i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
@@ -510,7 +520,7 @@
 
 
                   </ul>
-                </div>
+                </div> -->
                 <div class="districWisSecRight districWisSecRight_FullWidth">
 
                 <div style="text-align:center; margin-top: 30px;">
@@ -520,94 +530,94 @@
                     </div>
 
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
+                    <!-- <div class="districWisSecRightBox">
                       <h3>Day Purchase</h3>
                       <div class="valueSec">
                         <span class="mt"><span id="dpc">0.00</span> <strong>MT</strong></span>
                         <span class="lit"><span id="dplc">0.00</span> <strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
-                  <div class="col-sm-4 float-left">
+                  <!-- <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
                       <h3>Day Sale </h3>
                       <div class="valueSec">
                         <span class="mt"><span id="dsc">0.00</span> <strong>MT</strong></span>
                         <span class="lit"><span id="dslc">0.00</span> <strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
-                      <h3>Day Collection </h3>
+                    <!-- <div class="districWisSecRightBox">
+                      <h3>Day Collection </h3> -->
                       <!-- <div class="valueSec"> -->
                       <!-- <span class="mt" id="recvdy">250 </span> -->
                       <!-- <span class="lit">250 <strong>L</strong></span> -->
-                      <p class="price">
+                      <!-- <p class="price">
                         <span class="lit" id="recvdyc" STYLE="font-size:18.0pt ;"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>
                         </span>
-                      </p>
+                      </p> -->
                       <!-- </div> -->
                     </div>
                   </div>
 
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
+                    <!-- <div class="districWisSecRightBox">
                       <h3>Monthly Purchase </h3>
                       <div class="valueSec">
                         <span class="mt" id=""><span id="dpmc">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="dpmlqdc">0.00</span> <strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
+                    <!-- <div class="districWisSecRightBox">
                       <h3>Monthly Sale </h3>
                       <div class="valueSec">
                         <span class="mt" id=""><span id="smc">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="smlqdc">0.00</span><strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
-                      <h3>Monthly Collection </h3>
+                      <!-- <h3>Monthly Collection </h3> -->
                       <!-- <div class="valueSec"> -->
                       <!-- <span class="mt" id="recvmnth">250 </span> -->
                       <!-- <span class="lit">250 <strong>L</strong></span> -->
-                      <p class="price">
+                      <!-- <p class="price">
                         <span class="lit" id="recvmnthc" STYLE="font-size:18.0pt ;"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>
                         </span>
-                      </p>
+                      </p> -->
                       <!-- </div> -->
                     </div>
                   </div>
 
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
+                    <!-- <div class="districWisSecRightBox">
                       <h3>Yearly Purchase </h3>
                       <div class="valueSec">
                         <span class="mt" id=""><span id="pyrc">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="pyrlqc">0.00</span> <strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-sm-4 float-left">
-                    <div class="districWisSecRightBox">
+                    <!-- <div class="districWisSecRightBox">
                       <h3>Yearly Sale </h3>
                       <div class="valueSec">
                         <span class="mt" id=""><span id="syrc">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="syrlqc">0.00</span> <strong>L</strong></span>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
-                      <h3>Yearly Collection </h3>
-                      <p class="price">
+                      <!-- <h3>Yearly Collection </h3> -->
+                      <!-- <p class="price">
                         <span class="lit" id="recvyrc" STYLE="font-size:18.0pt ;"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>
                         </span>
-                      </p>
+                      </p> -->
                       <!-- <div class="valueSec"> -->
                       <!-- <span class="mt" id="recvyr">250 </span> -->
                       <!-- <span class="lit">250 <strong>L</strong></span> -->
@@ -887,7 +897,7 @@ $(".brdaypurchasec").click(function(){
           },
           title: {
             display: true,
-            text: 'Sale quantity(solid) For financial year <?php if ($this->session->userdata["loggedin"]["fin_yr"]) echo $this->session->userdata["loggedin"]["fin_yr"]; ?> - Total : <?php echo round($totsolidsale->qty, 3); ?> MT'
+            // text: 'Sale quantity(solid) For financial year <?php if ($this->session->userdata["loggedin"]["fin_yr"]) echo $this->session->userdata["loggedin"]["fin_yr"]; ?> - Total : <?php echo round($totsolidsale->qty, 3); ?> MT'
           },
 
 
@@ -895,7 +905,7 @@ $(".brdaypurchasec").click(function(){
             yAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'Unit in MT'
+                // labelString: 'Unit in MT'
               }
               // ,
               // ticks: {
@@ -971,13 +981,13 @@ $(".brdaypurchasec").click(function(){
           },
           title: {
             display: true,
-            text: 'Sale quantity(liquid) For financial year <?php if ($this->session->userdata["loggedin"]["fin_yr"]) echo $this->session->userdata["loggedin"]["fin_yr"]; ?> - Total : <?php echo round($totliquidsale->qty, 3); ?> LTR'
+            // text: 'Sale quantity(liquid) For financial year <?php if ($this->session->userdata["loggedin"]["fin_yr"]) echo $this->session->userdata["loggedin"]["fin_yr"]; ?> - Total : <?php echo round($totliquidsale->qty, 3); ?> LTR'
           },
           scales: {
             yAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'Unit in LTR'
+                // labelString: 'Unit in LTR'
               }
               // ,
               // ticks: {

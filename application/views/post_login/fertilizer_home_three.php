@@ -69,7 +69,7 @@
             <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/salerep">Sale Ledger</a></li>
             <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/cust_payblepaid">Due Register</a></li>
             <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/soc_ledger">Society Ledger</a></li>
-            <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/overdue_list">Overdue List</a></li>
+            <!-- <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/overdue_list">Overdue List</a></li> -->
             <li><a href="<?=base_url()?>index.php/fert/sppay/bpaymentlist">Payment List</a></li>
           </ul>
         </div>
@@ -93,9 +93,9 @@
                 <div class="threeBoxImg darkBlue"><img src="<?= base_url() ?>assets/images/boxIcon_a.png" alt=""></div>
                 <div class="threeBoxTxt">
                   <h2>Purchase For The Day</h2>
-                  <p class="price"><span class="mt"><?= round($totsolidpur, 3); ?><strong> mt</strong></span>
+                  <!-- <p class="price"><span class="mt"><?= round($totsolidpur, 3); ?><strong> mt</strong></span>
                     <span class="lit"><strong> </strong><?= round($totliquidpur, 3); ?><strong> LTR</strong></span>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
@@ -181,9 +181,9 @@
                 <img src="<?= base_url() ?>assets/images/icon_aa.png" alt="" class="bloxkSecImg">
                 <h3>Quantity Sold during the year</h3>
                 <p class="price">
-                  <span class="mt"><span id="quantitySold">0.0</span><strong> mt</strong></span>
+                  <!-- <span class="mt"><span id="quantitySold">0.0</span><strong> mt</strong></span> -->
                   <!-- <span class="mt" id="qty"><strong>mt</strong></span></p> -->
-                  <span class="lit"><span id="quantityltr">0.0</span><strong> LTR</strong></span>
+                  <!-- <span class="lit"><span id="quantityltr">0.0</span><strong> LTR</strong></span> -->
               </div>
             </div>
 
@@ -237,8 +237,8 @@
             <div class="sectionNew">
               <div class="stockPointSecTitle">
                 <div class="col-sm-12">
-                  <h2>Company Wise Status</h2>
-                  <div class="selectBox">
+                  <!-- <h2>Company Wise Status</h2> -->
+                  <!-- <div class="selectBox">
                     <select name="company_dtls" class="form-control district" id="company_dtls">
                       <option value="">Select Company</option>
                       <?php
@@ -249,7 +249,7 @@
                       }
                       ?>
                     </select>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -268,8 +268,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Day Purchase</h3> -->
                       <div class="valueSec">
-                        <span class="mt"><span id="dpc">0.00</span> <strong>MT</strong></span>
-                        <span class="lit"><span id="dplc">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt"><span id="dpc">0.00</span> <strong>MT</strong></span>
+                        <span class="lit"><span id="dplc">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
@@ -277,8 +277,8 @@
                     <div class="districWisSecRightBox">
                       <!-- <h3>Day Sale </h3> -->
                       <div class="valueSec">
-                        <span class="mt"><span id="dsc">0.00</span> <strong>MT</strong></span>
-                        <span class="lit"><span id="dslc">0.00</span> <strong>L</strong></span>
+                        <!-- <span class="mt"><span id="dsc">0.00</span> <strong>MT</strong></span>
+                        <span class="lit"><span id="dslc">0.00</span> <strong>L</strong></span> -->
                       </div>
                     </div>
                   </div>
