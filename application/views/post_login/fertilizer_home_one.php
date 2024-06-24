@@ -111,6 +111,7 @@
                   <div class="threeBoxImg darkBlue"><img src="<?= base_url() ?>assets/images/boxIcon_a_new.png" alt=""></div>
                   <div class="threeBoxTxt">
                     <!-- <h2>Purchase For The Day</h2> -->
+                    <h2>Godown Details</h2>
                     <p class="price"><span class="mt">
                         <?php                                                         //Solid
 
@@ -152,6 +153,7 @@
                   </div>
                   <div class="threeBoxTxt">
                     <!-- <h2>Sale For The Day</h2> -->
+                    <h2>File Upload</h2>
                     <p class="price"><span class="mt"><?php                               //Solid
                                                       if ($this->session->userdata['loggedin']['ho_flag'] == "Y")      //User in HO
                                                       {
@@ -245,6 +247,7 @@
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
                       <!-- <h3>Day Purchase</h3> -->
+                      <h3>Location Master</h3>
                       <div class="valueSec">
                         <!-- <span class="mt"><span id="dp">0.00</span> <strong>MT</strong></span>
                         <span class="lit"><span id="dpl">0.00</span> <strong>L</strong></span> -->
@@ -253,7 +256,7 @@
                   </div>
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
-                      <!-- <h3>Day Sale </h3> -->
+                      <h3>Purpose </h3>
                       <div class="valueSec">
                         <!-- <span class="mt"><span id="ds">0.00</span> <strong>MT</strong></span>
                         <span class="lit"><span id="dsl">0.00</span> <strong>L</strong></span> -->
@@ -262,12 +265,14 @@
                   </div>
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
-                      <!-- <h3>Day Collection </h3> -->
+                      <h3>Zone Master </h3>
                       <!-- <div class="valueSec"> -->
                       <!-- <span class="mt" id="recvdy">250 </span> -->
                       <!-- <span class="lit">250 <strong>L</strong></span> -->
                       <p class="price">
-                        <span class="lit" id="recvdy" STYLE="font-size:18.0pt ;"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>
+                        <span class="lit" id="recvdy" STYLE="font-size:18.0pt ;"><strong>
+                          <!-- <i class="fa fa-inr" aria-hidden="true"></i>  -->
+                        </strong>
                         </span>
                       </p>
                       <!-- </div> -->
@@ -277,6 +282,7 @@
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
                       <!-- <h3>Monthly Purchase </h3> -->
+                      <h3>Godown Type </h3>
                       <div class="valueSec">
                         <!-- <span class="mt" id=""><span id="dpm">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="dpmlqd">0.00</span> <strong>L</strong></span> -->
@@ -286,6 +292,7 @@
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
                       <!-- <h3>Monthly Sale </h3> -->
+                      <h3>Godown Status </h3>
                       <div class="valueSec">
                         <!-- <span class="mt" id=""><span id="sm">0.00</span> <strong>MT</strong></span>
                         <span class="lit" id=""><span id="smlqd">0.00</span><strong>L</strong></span> -->
