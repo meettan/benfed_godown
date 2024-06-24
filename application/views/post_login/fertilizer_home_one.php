@@ -256,7 +256,7 @@
                   </div>
                   <div class="col-sm-4 float-left">
                     <div class="districWisSecRightBox">
-                      <h3>Purpose </h3>
+                      <h3>Purpose Master</h3>
                       <div class="valueSec">
                         <!-- <span class="mt"><span id="ds">0.00</span> <strong>MT</strong></span>
                         <span class="lit"><span id="dsl">0.00</span> <strong>L</strong></span> -->
