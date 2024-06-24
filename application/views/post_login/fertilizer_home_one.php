@@ -150,6 +150,7 @@
                 <div class="threeBoxNewSmall">
                   <div class="threeBoxImg yellowCol">
                     <!-- <img src="<?= base_url() ?>assets/images/boxIcon_b_new.png" alt=""> -->
+                    <img src="<?= base_url() ?>assets/images/boxIcon_collec.png" alt="">
                   </div>
                   <div class="threeBoxTxt">
                     <!-- <h2>Sale For The Day</h2> -->
