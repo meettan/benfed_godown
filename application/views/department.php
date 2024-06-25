@@ -68,11 +68,11 @@ a:hover{
 			<div class="col-md-1"></div>
 			<div class="col-md-10" style="text-align:center;color:#0000ff">
 				<br><br>
-			<h1>Inaugurated by: <br> Shri Pradip Mazumder, Hon'ble Minister-in-Charge,<br>
-			    Department of Cooperation
+			<h1>Inaugurated by: <br> Dr. Krishna Gupta (IAS), Hon'ble Additional Chief Secrectary,<br>
+			    Cooperation Department
 				<br>
 				Govt. of West Bengal <br>
-				Dated:25-06-2024</h1>
+				Dated:26-06-2024</h1>
 			</div>
 		</div>
 		
