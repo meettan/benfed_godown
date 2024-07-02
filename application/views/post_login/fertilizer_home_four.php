@@ -89,10 +89,10 @@
                 <div class="threeBoxImg yellowCol"><img src="<?= base_url() ?>assets/images/boxIcon_collec.png" alt="">
                 </div>
                 <div class="threeBoxTxt">
-                  <h2>Today's Collection</h2>
+                  <!-- <h2>Today's Collection</h2>
                   <p class="price">
                     <span class="lit"><strong> </strong><i class="fa fa-inr" aria-hidden="true"></i><?= round($todaycollection->tot_recvamt,3) ?></span>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
