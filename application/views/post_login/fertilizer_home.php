@@ -695,10 +695,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg lightBlue"><img src="<?=base_url()?>assets/images/boxIcon_e.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Closing</h2>
+                <!-- <h2>Closing</h2>
                 <p class="price"><span class="mt">250<strong> mt</strong></span> <span class="mt2">250<strong>
                       mt</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p> -->
               </div>
             </div>
           </div>
@@ -956,12 +956,12 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg lightBlue"><img src="<?=base_url()?>assets/images/boxIcon_e.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Closing</h2>
+                <!-- <h2>Closing</h2>
                 <p class="price"><span class="mt"><?=$totsld_op+($totsolidpur->qty)-($brsalesolidtoday->qty)?><strong>
                       MT</strong></span>
                   <span class="lit"><strong>
                     </strong><?=$totlqd_op+($totliquidpur->qty)-($brsaleliquidtoday->qty)?><strong> LTR</strong></span>
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -1194,10 +1194,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg lightBlue"><img src="<?=base_url()?>assets/images/boxIcon_e.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Closing</h2>
+                <!-- <h2>Closing</h2>
                 <p class="price"><span class="mt">250<strong> mt</strong></span> <span class="mt">250<strong>
                       mt</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p> -->
               </div>
             </div>
           </div>

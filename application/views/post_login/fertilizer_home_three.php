@@ -117,12 +117,12 @@
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg lightBlue"><img src="<?= base_url() ?>assets/images/boxIcon_e.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>Closing</h2>
+                  <!-- <h2>Closing</h2>
                   <p class="price"><span class="mt"><?= $closingS ?><strong>
                         MT</strong></span>
                     <span class="lit"><strong>
                       </strong><?= $closingL ?><strong> LTR</strong></span>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
