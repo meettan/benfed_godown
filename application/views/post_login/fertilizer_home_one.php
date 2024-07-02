@@ -69,14 +69,14 @@
             <h2>Quick Links <i class="fa fa-link" aria-hidden="true"></i></h2>
             <?php if ($this->session->userdata['loggedin']['ho_flag'] == "N") { ?>
               <!-- //Admin loging in Branch Office -->
-              <ul>
+              <!-- <ul>
 
                 <li><a href="<?php echo site_url('stock/stock_entry'); ?>">Purchase</a></li>
                 <li><a href="<?php echo site_url('trade/sale'); ?>">Sale</a></li>
                 <li><a href="<?php echo site_url('socpay/society_payment'); ?>">Customer Payment</a></li>
                 <li> <a href="#">Stock Ledger</a></li>
                 <li><a href="#">Day Book</a></li>
-              </ul>
+              </ul> -->
             <?php } else { ?>
 
               <ul>

@@ -13,13 +13,13 @@
     <div class="col-sm-3 float-left">
       <div class="left_bar_new">
         <h2>Quick Links <i class="fa fa-link" aria-hidden="true"></i></h2>
-        <ul>
+        <!-- <ul>
           <li><a href="https://benfed.in/godown/index.php/stock/stock_entry">Purchase</a></li>
           <li><a href="https://benfed.in/godown/index.php/trade/sale">Sale</a></li>
           <li><a href="https://benfed.in/godown/index.php/socpay/society_payment">Customer Payment</a></li>
           <li> <a href="#">Stock Ledger</a></li>
           <li><a href="#">Day Book</a></li>
-        </ul>
+        </ul> -->
       </div>
     </div>
 

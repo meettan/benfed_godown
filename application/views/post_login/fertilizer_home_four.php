@@ -13,7 +13,7 @@
     <div class="col-sm-3 float-left">
       <div class="left_bar_new">
         <h2>Quick Links <i class="fa fa-link" aria-hidden="true"></i></h2>
-        <ul>
+        <!-- <ul>
           <li><a href="https://benfed.in/benfed_godown/index.php/adv/advancefilter">Advance</a></li>
           <li><a href="https://benfed.in/benfed_godown/index.php/adv/advancefwd">Advance Forward</a></li>
           <li><a href="https://benfed.in/benfed_godown/index.php/stock/stock_entry">Purchase</a></li>
@@ -28,7 +28,7 @@
           <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/cust_payblepaid">Due Register</a></li>
           <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/soc_ledger">Society Ledger</a></li>
           <!-- <li><a href="https://benfed.in/benfed_godown/index.php/fert/rep/overdue_list">Overdue List</a></li> -->
-        </ul>
+        </ul> -->
       </div>
     </div>
 
