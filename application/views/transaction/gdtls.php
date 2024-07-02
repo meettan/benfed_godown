@@ -18,7 +18,7 @@
                 </div>
                 </div>
                 <div class="form-group row">
-                <label for="w_addrs" class="col-sm-2 col-form-label">WareHouse Address:</label>
+                <label for="w_addrs" class="col-sm-2 col-form-label">Address Including Pin:</label>
                 <div class="col-sm-10">
                 <textarea id=w_addrs name="w_addrs" class="form-control"></textarea>
 
@@ -26,7 +26,60 @@
 
             </div>
             <div class="form-group row">
-                <label for="onholdv" class="col-sm-2 col-form-label">Status:</label>
+                <label for="ps" class="col-sm-2 col-form-label">PS</label>
+                <div class="col-sm-4">
+                    <input type="text" id=ps name="ps" class="form-control "  />
+
+                </div>
+            
+                <label for="mouza" class="col-sm-2 col-form-label">Mouza:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=mouza name="mouza" class="form-control required"  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="jlno" class="col-sm-2 col-form-label">JL No</label>
+                <div class="col-sm-4">
+                    <input type="text" id=jl name="jl" class="form-control "  />
+
+                </div>
+            
+                <label for="dag" class="col-sm-2 col-form-label">DAAG No.:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=dag name="dag" class="form-control required"  />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="khotian" class="col-sm-2 col-form-label">Khotian No</label>
+                <div class="col-sm-4">
+                    <input type="text" id=khotian name="khotian" class="form-control "  />
+
+                </div>
+            
+                <label for="touzi" class="col-sm-2 col-form-label">Touzi No.:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=touzi name="touzi" class="form-control required"  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sqft)</label>
+                <div class="col-sm-4">
+                    <input type="text" id=floorarea name="floorarea" class="form-control "  />
+
+                </div>
+            
+                <label for="areapremises" class="col-sm-2 col-form-label">Area Of Premises( SATAK/ACRE):</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=areapr name="areapr" class="form-control required"  />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
                 <div class="col-sm-4">
                     <select name="status" class="form-control" id="status" required>
                         <option value="">Select Status</option>
@@ -40,7 +93,7 @@
                     </select>
                </div>
             
-                <label for="purpose" class="col-sm-2 col-form-label">Purpose:</label>
+                <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
                 <div class="col-sm-4">
                    
                     <select name="purpose" class="form-control required" id="purpose" >
@@ -59,13 +112,13 @@
                  </div>
             </div>
             <div class="form-group row">
-                <label for="capacity" class="col-sm-2 col-form-label">Capacity:</label>
+                <label for="capacity" class="col-sm-2 col-form-label">Capacity( In MT ):</label>
                 <div class="col-sm-4">
                     <input type="text" id=capacity name="capacity" class="form-control required"  />
 
                 </div>
             
-                <label for="loc" class="col-sm-2 col-form-label">Loacation:</label>
+                <label for="loc" class="col-sm-2 col-form-label">GPS Location:</label>
                 <div class="col-sm-4">
 
                  <!-- <select name="location" class="form-control required" id="location" >
@@ -85,7 +138,7 @@
             </div>
 
             <div class="form-group row">
-                <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent start sate:</label>
+                <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent/Lease Start Dt:</label>
                 <div class="col-sm-4">
                     <input type="date" id=rent_st_dt name="rent_st_dt" class="form-control required"  />
 
@@ -93,7 +146,7 @@
                 
             <!-- </div>
             <div class="form-group row"> -->
-                <label for="rent_end_dt" class="col-sm-2 col-form-label">Rent End date:</label>
+                <label for="rent_end_dt" class="col-sm-2 col-form-label">Rent/Lease End Dt:</label>
                 <div class="col-sm-4">
                     <input type="date" id=rent_end_dt name="rent_end_dt" class="form-control required"  />
 
@@ -108,7 +161,7 @@
                 </div>
             <!-- </div>
             <div class="form-group row"> -->
-                <label for="rate" class="col-sm-2 col-form-label">rate:</label>
+                <label for="rate" class="col-sm-2 col-form-label">Rate:</label>
                 <div class="col-sm-4">
                     <input type="text" id=rate name="rate" class="form-control required"  />
 
