@@ -55,7 +55,7 @@ if($this->session->userdata['loggedin']['ho_flag']=="Y")
 ?></div> -->
                 <div class="threeBoxImg darkBlue"><img src="<?=base_url()?>assets/images/boxIcon_a.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>Purchase For The Day</h2>
+                  <!-- <h2>Purchase For The Day</h2> -->
                   <p class="price"><span class="mt"> <?php
 if($this->session->userdata['loggedin']['ho_flag']=="Y")
 {

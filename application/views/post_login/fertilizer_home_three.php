@@ -92,7 +92,7 @@
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg darkBlue"><img src="<?= base_url() ?>assets/images/boxIcon_a.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>Purchase For The Day</h2>
+                  <!-- <h2>Purchase For The Day</h2> -->
                   <!-- <p class="price"><span class="mt"><?= round($totsolidpur, 3); ?><strong> mt</strong></span>
                     <span class="lit"><strong> </strong><?= round($totliquidpur, 3); ?><strong> LTR</strong></span>
                   </p> -->
