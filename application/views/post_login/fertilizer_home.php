@@ -652,10 +652,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg redCol"><img src="<?=base_url()?>assets/images/boxIcon_d.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Opening</h2>
+                <!-- <h2>Opening</h2>
                 <p class="price"><span class="mt">250<strong> mt</strong></span> <span class="mt2">250<strong>
                       mt</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p> -->
               </div>
             </div>
           </div>
@@ -1155,10 +1155,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg redCol"><img src="<?=base_url()?>assets/images/boxIcon_d.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Opening</h2>
+                <!-- <h2>Opening</h2>
                 <p class="price"><span class="mt">250<strong> mt</strong></span> <span class="mt">250<strong>
                       mt</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p> -->
               </div>
             </div>
           </div>

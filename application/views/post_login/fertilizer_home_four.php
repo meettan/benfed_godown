@@ -39,9 +39,9 @@
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg redCol"><img src="<?= base_url() ?>assets/images/boxIcon_d.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>Opening</h2>
+                  <!-- <h2>Opening</h2>
                    <p class="price"><span class="mt"><?= $openingS ?><strong> MT</strong></span>
-                    <span class="lit"><strong> </strong><?= $openingL ?><strong> LTR</strong></span></p>
+                    <span class="lit"><strong> </strong><?= $openingL ?><strong> LTR</strong></span></p> -->
                 </div>
               </div>
             </div>
