@@ -80,8 +80,9 @@ if($this->session->userdata['loggedin']['ho_flag']=="Y")
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg yellowCol"><img src="<?=base_url()?>assets/images/boxIcon_b.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>Sale For The Day</h2>
-                  <p class="price"><span class="mt"><?php
+                  <!-- <h2>Sale For The Day</h2>
+                  <p class="price"><span class="mt"> -->
+                    <?php
 if($this->session->userdata['loggedin']['ho_flag']=="Y")
 {
     echo $ho_sale_daysld->tot_sale_ho; 
@@ -943,10 +944,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg yellowCol"><img src="<?=base_url()?>assets/images/boxIcon_b.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Sale For The Day</h2>
+                <!-- <h2>Sale For The Day</h2>
                 <p class="price"><span class="mt"><?=round($brsalesolidtoday->qty, 3);?><strong> MT</strong></span>
                   <span class="lit"><strong> </strong><?=round($brsaleliquidtoday->qty, 3);?><strong>
-                      LTR</strong></span></p>
+                      LTR</strong></span></p> -->
               </div>
             </div>
           </div>
@@ -1182,10 +1183,10 @@ $tot_lqd = 0.00;
             <div class="threeBoxNewSmall">
               <div class="threeBoxImg yellowCol"><img src="<?=base_url()?>assets/images/boxIcon_b.png" alt=""></div>
               <div class="threeBoxTxt">
-                <h2>Sale For The Day</h2>
+                <!-- <h2>Sale For The Day</h2>
                 <p class="price"><span class="mt">250<strong> mt</strong></span> <span class="mt">250<strong>
                       mt</strong></span>
-                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p>
+                  <span class="lit"><strong><i class="fa fa-inr" aria-hidden="true"></i> </strong>250</span></p> -->
               </div>
             </div>
           </div>

@@ -63,7 +63,7 @@
                 <div class="threeBoxNewSmall">
                   <div class="threeBoxImg yellowCol"><img src="<?= base_url() ?>assets/images/boxIcon_b.png" alt=""></div>
                   <div class="threeBoxTxt">
-                    <h2>Sale For The Day</h2>
+                    <!-- <h2>Sale For The Day</h2> -->
                     <p class="price"><span class="mt"><?php                               //Solid
                                                       if ($this->session->userdata['loggedin']['ho_flag'] == "Y")      //User in HO
                                                       {
