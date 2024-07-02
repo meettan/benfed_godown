@@ -208,7 +208,7 @@
                         <div class="sub-dropdown">
                              <?php if($this->session->userdata['loggedin']['user_type']!="U" && $this->session->userdata['loggedin']['ho_flag']=="Y"){?>
                             <!-- <a href="<?php echo site_url("source");?>">Company</a> -->
-                            <a href="<?php echo site_url("loc");?>">Location</a>
+                            <!-- <a href="<?php echo site_url("loc");?>">Location</a> -->
                             <a href="<?php echo site_url("zon");?>">Zone</a>
                             <a href="<?php echo site_url("gtype");?>">Godown Type</a>
                             <a href="<?php echo site_url("purp");?>">Purpose</a>

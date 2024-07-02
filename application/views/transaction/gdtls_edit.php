@@ -67,7 +67,7 @@
             
                 <label for="loc" class="col-sm-2 col-form-label">Loacation:</label>
                 <div class="col-sm-4">
-
+<!-- 
                  <select name="location" class="form-control required" id="location" >
 
                     <option value="">Select Location</option>
@@ -78,7 +78,8 @@
                 <?php
                 }
             ?>
-               </select>
+               </select> -->
+               <input type="text" id=location name="location" class="form-control required"  value="<?=$wearhouse->location ? $wearhouse->location : ''?>" />
                 </div>
             </div>
 
