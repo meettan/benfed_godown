@@ -213,24 +213,13 @@
                             <a href="<?php echo site_url("gtype");?>">Godown Type</a>
                             <a href="<?php echo site_url("purp");?>">Purpose</a>
                             <a href="<?php echo site_url("gtstaus");?>">Status</a>
-                            
-                            <!-- <a href="<?php echo site_url("crCatg");?>">Credit Note Category</a>
-                            <a href="<?php echo site_url("material");?>">Product</a>
-                            <a href="<?php echo site_url("category");?>">Sale Rate Category</a>
-                            <a href="<?php echo site_url("rateslab");?>">Sale Rate</a>
-                            <a href="<?php echo site_url("BNK");?>">Bank Master</a>
-                            <a href="<?php echo site_url("fomaster");?>">Fo Master</a>  -->
-                            <?php 
-                        // }elseif($this->session->userdata['loggedin']['user_type']!="U" && $this->session->userdata['loggedin']['ho_flag']!="Y" ){ 
-                        }elseif($this->session->userdata['loggedin']['ho_flag']=="N"){
-	?>
-						  <a href="<?php echo site_url("customer");?>">Society/Stock Point</a>	
+                         
 							<?php
 }elseif($this->session->userdata['loggedin']['user_id']=="sss1"){
                             ?>
                                 <!-- <a href="<?php echo site_url("fomaster");?>">Fo Master</a>     -->
-                           <a href="<?php echo site_url("customer");?>">Society/Stock Point</a> 
-                           <a href="<?php echo site_url("BNK");?>">Bank Master</a>
+                           <!-- <a href="<?php echo site_url("customer");?>">Society/Stock Point</a> 
+                           <a href="<?php echo site_url("BNK");?>">Bank Master</a> -->
                             <!--<a href="<?php //echo site_url("finance/view_bank_master");?>">Bank</a>-->
                           <?php } ?>
                         </div>
@@ -246,22 +235,16 @@
                             <i class="fa fa-angle-down"></i>
                         </div>
                         <?php if( $this->session->userdata['loggedin']['ho_flag']=="N"){?> 
-                        <div class="dropdown-content">
+                        <!-- <div class="dropdown-content">
                             <div class="sub-dropdown">
-                              <a href="<?php echo site_url("adv/advancefilter");?>">Advance</a>
-                              <a href="<?php echo site_url("adv/advancefwd");?>">Advance Forward</a>
-                              <a href="<?php echo site_url("stock/stock_entry");?>">Purchase</a>
-                              <a href="<?php echo site_url("trade/sale");?>">Sale</a>
-                              <a href="<?php echo site_url("drcrnote/dr_note");?>">Credit Note </a>
-                              <a href="<?php echo site_url("drcrnote/yearlydr_note");?>">Yearly Credit Note </a>
-                              <a href="<?php echo site_url("socpay/society_payment");?>">Receive Payment</a>
-                              <a href="<?php echo site_url("socpay/soc_payment_fwd");?>">Forward Payment</a>
-                              <!-- <a href="<?php echo site_url("virtualpnt/virtual_stk_point");?>">Secondary Stock Point</a> -->
+                             
                             </div>
-                        </div>
+                        </div> -->
                         <?php } ?>
 
-                        <?php if( $this->session->userdata['loggedin']['ho_flag']=="Y"){?> 
+                        <?php 
+                        // if( $this->session->userdata['loggedin']['ho_flag']=="Y")
+                        {?> 
                             <div class="dropdown-content"> 
                             <!-- <a href="<?php echo site_url("adv/company_advance");?>">Advance To Company</a>
                             <a href="<?php echo site_url("adv/company_advance_pending");?>">Pending Advance To Company</a> -->
@@ -321,11 +304,10 @@
                                     <a href="<?php echo site_url("fert/rep/stkStmt");?>">Consolidated Stock</a>
                                     <a href="<?php echo site_url("fert/rep/stkScomp");?>">Companywise Stock</a>
                                     <a href="<?php echo site_url("fert/rep/stkstkpnt");?>">Stockpoint Wise Stock</a>
-                                    <!-- <a href="<?php echo site_url("fert/rep/stkwsestprep");?>">Stock Point Wise Statement</a> -->
-                                    <a href="<?php echo site_url("fert/rep/stkSprod");?>">Productwise Stock</a>
+                                   
                                 </div>
-                            </div> -->
-                            <!-- <div class="sub-dropdown">
+                            </div> 
+                           
                                <a class="sub-dropbtn">Register <i class="fa fa-angle-right" style="float: right;"></i></a> 
                                <div class="sub-dropdown-content">
                                     <a href="<?php echo site_url("fert/rep/saledelivery_reg");?>">Society Wise Delivery Register </a>
@@ -336,15 +318,15 @@
                             <div class="dropdown-content">
 							   <?php if( $this->session->userdata['loggedin']['ho_flag']!="Y"){?>
                                  <div class="sub-dropdown">
-								   <a class="sub-dropbtn">Purchase & Sale <i class="fa fa-angle-right" style="float: right;"></i></a> 
-								   <div class="sub-dropdown-content">
-									<a href="<?php echo site_url("fert/rep/stkSprodro");?>">RO Wise Purchase & Sale</a>
+								   <!-- <a class="sub-dropbtn">Purchase & Sale <i class="fa fa-angle-right" style="float: right;"></i></a>  -->
+								   <!-- <div class="sub-dropdown-content"> -->
+									<!-- <a href="<?php echo site_url("fert/rep/stkSprodro");?>">RO Wise Purchase & Sale</a>
 									<a href="<?php echo site_url("fert/rep/purrep");?>">Purchase Ledger</a>
 									<a href="<?php echo site_url("fert/rep/salerep");?>">Sale Ledger</a>
 									<a href="<?php echo site_url("fert/rep/salerepsoc");?>">Sale Ledger(Stock point Wise)</a>
-									<a href="<?php echo site_url("fert/rep/ps_pl");?>">All Sale Purchase </a>
-									<!-- <a href="<?php //echo site_url("fert/rep/salerep_psoc");?>">Society Wise Sale </a> -->
-									</div>
+									<a href="<?php echo site_url("fert/rep/ps_pl");?>">All Sale Purchase </a> -->
+									
+									<!-- </div> -->
                                  </div>
 								<!-- <div class="sub-dropdown">
 								 <a href="<?php echo site_url("fert/rep/cust_payblepaid");?>">Due Register</a> 
