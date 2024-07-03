@@ -38,6 +38,11 @@
                <input type="text" id=mouza name="mouza" class="form-control required"  />
                 </div>
             </div>
+            <div class="form-header">
+
+                <h4>Detailed Entry Of Land </h4>
+
+            </div>
             <div class="form-group row">
 
                 <label for="porcha" class="col-sm-2 col-form-label">Porcha:</label>
@@ -168,7 +173,11 @@
                <input type="text" id=location name="location" class="form-control required"  />
                 </div>
             </div>
+            <div class="form-header">
 
+<h4>Detailed Entry Of Rent </h4>
+
+</div>
             <div class="form-group row">
                 <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent/Lease Start Dt:</label>
                 <div class="col-sm-4">
