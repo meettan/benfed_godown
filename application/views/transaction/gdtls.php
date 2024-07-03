@@ -38,6 +38,28 @@
                <input type="text" id=mouza name="mouza" class="form-control required"  />
                 </div>
             </div>
+            <div class="form-group row">
+                <label for="capacity" class="col-sm-2 col-form-label">Capacity( In MT ):</label>
+                <div class="col-sm-4">
+                    <input type="text" id=capacity name="capacity" class="form-control required"  />
+
+                </div>
+                <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sq.ft.)</label>
+                <div class="col-sm-4">
+                    <input type="text" id=floorarea name="floorarea" class="form-control "  />
+
+                </div>
+</div>
+<div class="form-group row">
+            
+            
+                <label for="loc" class="col-sm-2 col-form-label">GPS Location:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=location name="location" class="form-control required"  />
+                </div>
+            </div>
             <div class="form-header">
 
                 <h4>Detailed Entry Of Land </h4>
@@ -103,33 +125,17 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sqft)</label>
+                <!-- <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sq.ft.)</label>
                 <div class="col-sm-4">
                     <input type="text" id=floorarea name="floorarea" class="form-control "  />
 
-                </div>
+                </div> -->
             
                 <label for="areapremises" class="col-sm-2 col-form-label">Area Of Premises( SATAK/ACRE):</label>
                 <div class="col-sm-4">
 
                <input type="text" id=areapr name="areapr" class="form-control required"  />
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
-                <div class="col-sm-4">
-                    <select name="status" class="form-control" id="status" required>
-                        <option value="">Select Status</option>
-                        <?php
-                        foreach ($gdstat as $gdst) {
-                        ?>
-                            <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
-                        <?php
-                            }
-                        ?>
-                    </select>
-               </div>
-            
                 <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
                 <div class="col-sm-4">
                    
@@ -146,32 +152,49 @@
 
                     </select>
 
+            </div>
+            <div class="form-group row">
+                <!-- <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
+                <div class="col-sm-4">
+                    <select name="status" class="form-control" id="status" required>
+                        <option value="">Select Status</option>
+                        <?php
+                        foreach ($gdstat as $gdst) {
+                        ?>
+                            <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
+               </div> -->
+            
+                <!-- <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
+                <div class="col-sm-4">
+                   
+                    <select name="purpose" class="form-control required" id="purpose" >
+
+                        <option value="">Select Purpose</option>
+                        <?php
+                        foreach ($purpdtls as $purp) {
+                        ?>
+                            <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+                        <?php
+                        }
+                        ?>
+
+                    </select> -->
+
                  </div>
             </div>
             <div class="form-group row">
-                <label for="capacity" class="col-sm-2 col-form-label">Capacity( In MT ):</label>
-                <div class="col-sm-4">
-                    <input type="text" id=capacity name="capacity" class="form-control required"  />
-
-                </div>
             
+<!--             
                 <label for="loc" class="col-sm-2 col-form-label">GPS Location:</label>
                 <div class="col-sm-4">
 
-                 <!-- <select name="location" class="form-control required" id="location" >
-
-                    <option value="">Select Location</option>
-                    <?php
-                    foreach ($locdtls as $loc) {
-                    ?>
-                        <option value="<?php echo $loc->id; ?>"><?php echo $loc->loc_name; ?></option>
-                <?php
-                }
-            ?>
-
-               </select> -->
+                 
                <input type="text" id=location name="location" class="form-control required"  />
-                </div>
+                </div> -->
             </div>
             <div class="form-header">
 
@@ -193,7 +216,21 @@
 
                 </div>
             </div>
-            
+            <div class="form-group row">
+                <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
+                <div class="col-sm-4">
+                    <select name="status" class="form-control" id="status" required>
+                        <option value="">Select Status</option>
+                        <?php
+                        foreach ($gdstat as $gdst) {
+                        ?>
+                            <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
+               </div>
+                        </div>
             <div class="form-group row">
                 <label for="onholdv" class="col-sm-2 col-form-label">Rent Duration:</label>
                 <div class="col-sm-4">
@@ -216,7 +253,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="to_whome" class="col-sm-2 col-form-label">To Whome:</label>
+                <label for="to_whome" class="col-sm-2 col-form-label">To Whome( Rented/Lease out ):</label>
                 <div class="col-sm-10">
                     <input type="text" id=to_whome name="to_whome" class="form-control required"  />
 
