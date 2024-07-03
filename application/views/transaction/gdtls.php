@@ -224,7 +224,7 @@
             </div>
             
             <div class="form-group row">
-                <label for="remarks" class="col-sm-2 col-form-label">Rearks:</label>
+                <label for="remarks" class="col-sm-2 col-form-label">Remarks:</label>
                 <div class="col-sm-10">
 
                     <textarea id=remarks name="remarks" class="form-control"></textarea>
