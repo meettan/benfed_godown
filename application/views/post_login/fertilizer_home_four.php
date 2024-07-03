@@ -100,10 +100,10 @@
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg redCol"><img src="<?= base_url() ?>assets/images/boxIcon_inv.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>No.of Invoices </h2>
+                  <!-- <h2>No.of Invoices </h2>
                   <p class="price"><span class="mt"><?= $b2b->cnt ?><strong> B2B</strong></span>
                     <span class="lit"><strong> </strong><?= $b2c->cnt ?><strong> B2C</strong></span>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>

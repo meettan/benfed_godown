@@ -143,10 +143,10 @@
               <div class="threeBoxNewSmall">
                 <div class="threeBoxImg redCol"><img src="<?= base_url() ?>assets/images/boxIcon_inv.png" alt=""></div>
                 <div class="threeBoxTxt">
-                  <h2>No.of Invoices </h2>
+                  <!-- <h2>No.of Invoices </h2>
                   <p class="price"><span class="mt"><?= $b2b->cnt ?><strong> B2B</strong></span>
                     <span class="lit"><strong> </strong><?= $b2c->cnt ?><strong> B2C</strong></span>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
@@ -190,11 +190,11 @@
             <div class="col-sm-6 float-left">
               <div class="bloxkSec">
                 <img src="<?= base_url() ?>assets/images/icon_bb.png" alt="" class="bloxkSecImg">
-                <h3>No.of Invoices</h3>
+                <!-- <h3>No.of Invoices</h3>
                 <p class="price">
                   <span class="mt"><span id="quantityPurchaseMt">0.0</span><strong> B2B</strong></span>
                   <span class="lit"><span id="quantityPurchaseLtr">0.0<span> <strong>B2C</strong></span>
-                </p>
+                </p> -->
               </div>
             </div>
 
