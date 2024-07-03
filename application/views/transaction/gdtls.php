@@ -39,6 +39,38 @@
                 </div>
             </div>
             <div class="form-group row">
+
+                <label for="porcha" class="col-sm-2 col-form-label">Porcha:</label>
+
+                <div class="col-sm-4">
+
+                    <select name="porcha" id="porcha" style="width: 100%;"  class="form-control" required>
+
+                        <option value="">Select</option>
+                        <option value="Y">YES</option>
+                        <option value="N">No</option>
+
+                    </select>
+
+                </div>
+
+                <label for="dagty" class="col-sm-2 col-form-label">Daag Type:</label>
+
+                <div class="col-sm-4">
+
+                    <select name="dagty" id="Porcha" style="width: 100%;"  class="form-control" required>
+
+                        <option value="">Select</option>
+                        <option value="C">CS</option>
+                        <option value="R">RS</option>
+                        <option value="K">LR</option>
+                        <option value="K">KB</option>
+                        <option value="N">NA</option>
+                    </select>
+
+                </div>
+</div>
+            <div class="form-group row">
                 <label for="jlno" class="col-sm-2 col-form-label">JL No</label>
                 <div class="col-sm-4">
                     <input type="text" id=jl name="jl" class="form-control "  />

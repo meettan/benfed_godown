@@ -74,6 +74,8 @@
 				"dag"			 =>  $this->input->post('dag'),
 				"jlno"			 =>  $this->input->post('jlno'),
 				"mouza"			 =>  $this->input->post('mouza'),
+				"dagty"			 =>  $this->input->post('dagty'),
+				"porcha"	     =>  $this->input->post('porcha'),
 				"ps"			 =>  $this->input->post('ps'),
 				"br_id"          =>  $this->session->userdata['loggedin']['branch_id'],
                 "created_by"     =>  $this->session->userdata('loggedin')['user_id'],
