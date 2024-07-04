@@ -50,16 +50,105 @@
 
                 </div>
 </div>
-<div class="form-group row">
-            
-            
+         <div class="form-group row">
+                 
                 <label for="loc" class="col-sm-2 col-form-label">GPS Location:</label>
                 <div class="col-sm-4">
 
                  
                <input type="text" id=location name="location" class="form-control required"  />
                 </div>
+                <label for="fireext" class="col-sm-2 col-form-label">FIRE EXTINGUISHER STATUS:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=fireext name="fireext" class="form-control "  />
+                </div>
             </div>
+            <div class="form-group row">
+                 
+                <label for="disnrp" class="col-sm-2 col-form-label">DISTANCE FROM NEAREST RAKE POINT:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=disnrp name="disnrp" class="form-control required"  />
+                </div>
+                <label for="disfr" class="col-sm-2 col-form-label">DISTANCE FROM ROAD:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=disfr name="disfr" class="form-control "  />
+                </div>
+            </div>
+            <div class="form-group row">
+                 
+                <label for="bar" class="col-sm-2 col-form-label">BRAEDTH OF APPROACH ROAD:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=bar name="bar" class="form-control required"  />
+                </div>
+                <label for="tar" class="col-sm-2 col-form-label">TYPE OF APP. ROAD:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=tar name="tar" class="form-control "  />
+                </div>
+            </div>
+            <div class="form-group row">
+                 
+                <label for="phc" class="col-sm-2 col-form-label">PHYSICAL CONDITION:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=phc name="phc" class="form-control required"  />
+                </div>
+                <label for="eg" class="col-sm-2 col-form-label">ENTRY GATE:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=eg name="eg" class="form-control "  />
+                </div>
+            </div>
+            <div class="form-group row">
+                 
+                <label for="venti" class="col-sm-2 col-form-label">VENTILLATION:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=venti name="venti" class="form-control "  />
+                </div>
+                <label for="ph" class="col-sm-2 col-form-label">PLINTH HEIGHT:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=ph name="ph" class="form-control "  />
+                </div>
+            </div>
+            <div class="form-group row">
+                 
+                <label for="eleccon" class="col-sm-2 col-form-label">CONDITION OF ELECTRICITY:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=eleccon name="eleccon" class="form-control "  />
+                </div>
+                <label for="iew" class="col-sm-2 col-form-label">INTERNAL/EXTERNAL WIRING:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=iew name="iew" class="form-control "  />
+                </div>
+            </div>
+            <div class="form-group row">
+                 
+                <label for="obm" class="col-sm-2 col-form-label">OFFICE BUILDING MAINTAT:</label>
+                <div class="col-sm-4">
+
+                 
+               <input type="text" id=obm name="obm" class="form-control "  />
+                </div>
+</div>
             <div class="form-header">
 
                 <h4>Detailed Entry Of Land </h4>
@@ -186,16 +275,7 @@
 
                  </div>
             </div>
-            <div class="form-group row">
-            
-<!--             
-                <label for="loc" class="col-sm-2 col-form-label">GPS Location:</label>
-                <div class="col-sm-4">
-
-                 
-               <input type="text" id=location name="location" class="form-control required"  />
-                </div> -->
-            </div>
+         
             <div class="form-header">
 
 <h4>Detailed Entry Of Rent </h4>
@@ -268,11 +348,75 @@
                 </div>
             </div>
           
+    <div class="form-header">
+
+<h4>Detailed Entry Of HIRING </h4>
+
+</div> 
+<div class="form-group row">
+                <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent/Lease Start Dt:</label>
+                <div class="col-sm-4">
+                    <input type="date" id=rent_st_dt name="rent_st_dt" class="form-control required"  />
+
+                </div>
+                
+            <!-- </div>
+            <div class="form-group row"> -->
+                <label for="rent_end_dt" class="col-sm-2 col-form-label">Rent/Lease End Dt:</label>
+                <div class="col-sm-4">
+                    <input type="date" id=rent_end_dt name="rent_end_dt" class="form-control required"  />
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
+                <div class="col-sm-4">
+                    <select name="status" class="form-control" id="status" required>
+                        <option value="">Select Status</option>
+                        <?php
+                        foreach ($gdstat as $gdst) {
+                        ?>
+                            <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
+                        <?php
+                            }
+                        ?>
+                    </select>
+               </div>
+                        </div>
+            <div class="form-group row">
+                <label for="onholdv" class="col-sm-2 col-form-label">Rent Duration:</label>
+                <div class="col-sm-4">
+                    <input type="text" id=rent_duration name="rent_duration" class="form-control required"  />
+
+                </div>
+            <!-- </div>
+            <div class="form-group row"> -->
+                <label for="rate" class="col-sm-2 col-form-label">Rate:</label>
+                <div class="col-sm-4">
+                    <input type="text" id=rate name="rate" class="form-control required"  />
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="monthly_remt_amt" class="col-sm-2 col-form-label">Monthly rent amount:</label>
+                <div class="col-sm-10">
+                    <input type="text" id=monthly_remt_amt name="monthly_remt_amt" class="form-control required"  />
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="to_whome" class="col-sm-2 col-form-label">To Whome( Rented/Lease out ):</label>
+                <div class="col-sm-10">
+                    <input type="text" id=to_whome name="to_whome" class="form-control required"  />
+
+                </div>
+            </div>
+                      
         </div>
 
-    
+   
 
-        <div class="col-md-5 container form-wraper" style="margin-left: 10px;">
+        <div class="col-md-4 container form-wraper" style="margin-left: 80px;">
 
                 <div class="form-header">
 

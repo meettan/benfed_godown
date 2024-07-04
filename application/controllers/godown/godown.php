@@ -18,6 +18,9 @@
             }
 		}
 	public function index(){
+		// $branch_id  = $this->session->userdata['loggedin']['branch_id'];
+		// $where               = array("br_id"=>$branch_id);
+
 		$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,NULL,0);
 		$this->load->view('post_login/fertilizer_main');
 		$this->load->view("transaction/dashboard",$data);
@@ -77,6 +80,18 @@
 				"dagty"			 =>  $this->input->post('dagty'),
 				"porcha"	     =>  $this->input->post('porcha'),
 				"ps"			 =>  $this->input->post('ps'),
+				"obm"			 =>  $this->input->post('obm'),
+				"iew"			 =>  $this->input->post('iew'),
+				"eleccon"		 =>  $this->input->post('eleccon'),
+				"ph"			 =>  $this->input->post('ph'),
+				"venti"			 =>  $this->input->post('venti'),
+				"eg"			 =>  $this->input->post('eg'),
+				"phc"			 =>  $this->input->post('phc'),
+				"tar"			 =>  $this->input->post('tar'),
+				"bar"	         =>  $this->input->post('bar'),
+				"disnrp"		 =>  $this->input->post('disnrp'),
+				"disfr"			 =>  $this->input->post('disfr'),
+				"fireext"		 =>  $this->input->post('fireext'),
 				"br_id"          =>  $this->session->userdata['loggedin']['branch_id'],
                 "created_by"     =>  $this->session->userdata('loggedin')['user_id'],
                 "created_at"     =>  date('Y-m-d H:i:s')
