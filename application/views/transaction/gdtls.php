@@ -313,15 +313,20 @@
                         </div>
             <div class="form-group row">
                 <label for="onholdv" class="col-sm-2 col-form-label">Rent Duration:</label>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <input type="text" id=rent_duration name="rent_duration" class="form-control required"  />
 
                 </div>
             <!-- </div>
             <div class="form-group row"> -->
-                <label for="rate" class="col-sm-2 col-form-label">Rate:</label>
-                <div class="col-sm-4">
+                <label for="rate" class="col-sm-2 col-form-label">Rate( MT ):</label>
+                <div class="col-sm-2">
                     <input type="text" id=rate name="rate" class="form-control required"  />
+
+                </div>
+                <label for="ratesq" class="col-sm-2 col-form-label">Rate( Sq.ft.):</label>
+                <div class="col-sm-2">
+                    <input type="text" id=ratesq name="ratesq" class="form-control required"  />
 
                 </div>
             </div>
@@ -354,24 +359,24 @@
 
 </div> 
 <div class="form-group row">
-                <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent/Lease Start Dt:</label>
+                <label for="rent_st_dth" class="col-sm-2 col-form-label">Rent/Lease Start Dt:</label>
                 <div class="col-sm-4">
-                    <input type="date" id=rent_st_dt name="rent_st_dt" class="form-control required"  />
+                    <input type="date" id=rent_st_dth name="rent_st_dth" class="form-control required"  />
 
                 </div>
                 
             <!-- </div>
             <div class="form-group row"> -->
-                <label for="rent_end_dt" class="col-sm-2 col-form-label">Rent/Lease End Dt:</label>
+                <label for="rent_end_dth" class="col-sm-2 col-form-label">Rent/Lease End Dt:</label>
                 <div class="col-sm-4">
-                    <input type="date" id=rent_end_dt name="rent_end_dt" class="form-control required"  />
+                    <input type="date" id=rent_end_dth name="rent_end_dth" class="form-control required"  />
 
                 </div>
             </div>
             <div class="form-group row">
                 <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
                 <div class="col-sm-4">
-                    <select name="status" class="form-control" id="status" required>
+                    <select name="statush" class="form-control" id="statush" required>
                         <option value="">Select Status</option>
                         <?php
                         foreach ($gdstat as $gdst) {
@@ -385,29 +390,34 @@
                         </div>
             <div class="form-group row">
                 <label for="onholdv" class="col-sm-2 col-form-label">Rent Duration:</label>
-                <div class="col-sm-4">
-                    <input type="text" id=rent_duration name="rent_duration" class="form-control required"  />
+                <div class="col-sm-2">
+                    <input type="text" id=rent_durationh name="rent_durationh" class="form-control required"  />
 
                 </div>
             <!-- </div>
             <div class="form-group row"> -->
-                <label for="rate" class="col-sm-2 col-form-label">Rate:</label>
-                <div class="col-sm-4">
-                    <input type="text" id=rate name="rate" class="form-control required"  />
+                <label for="rateh" class="col-sm-2 col-form-label">Rate( MT ):</label>
+                <div class="col-sm-2">
+                    <input type="text" id=rateh name="rateh" class="form-control required"  />
+
+                </div>
+                <label for="ratesqh" class="col-sm-2 col-form-label">Rate( Sq.ft.):</label>
+                <div class="col-sm-2">
+                    <input type="text" id=ratesqh name="ratesqh" class="form-control required"  />
 
                 </div>
             </div>
             <div class="form-group row">
-                <label for="monthly_remt_amt" class="col-sm-2 col-form-label">Monthly rent amount:</label>
+                <label for="monthly_rent_amth" class="col-sm-2 col-form-label">Monthly rent amount:</label>
                 <div class="col-sm-10">
-                    <input type="text" id=monthly_remt_amt name="monthly_remt_amt" class="form-control required"  />
+                    <input type="text" id=monthly_rent_amth name="monthly_rent_amth" class="form-control required"  />
 
                 </div>
             </div>
             <div class="form-group row">
-                <label for="to_whome" class="col-sm-2 col-form-label">To Whome( Rented/Lease out ):</label>
+                <label for="from_whome" class="col-sm-2 col-form-label">From Whome( Rented/Lease out ):</label>
                 <div class="col-sm-10">
-                    <input type="text" id=to_whome name="to_whome" class="form-control required"  />
+                    <input type="text" id=from_whome name="from_whome" class="form-control "  />
 
                 </div>
             </div>
@@ -415,7 +425,6 @@
         </div>
 
    
-
         <div class="col-md-4 container form-wraper" style="margin-left: 80px;">
 
                 <div class="form-header">
