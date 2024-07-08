@@ -59,7 +59,34 @@
                  </div>
             </div>
             <div class="form-group row">
-                <label for="capacity" class="col-sm-2 col-form-label">Capacity:</label>
+                <label for="ps" class="col-sm-2 col-form-label">PS</label>
+                <div class="col-sm-4">
+                    <input type="text" id=ps name="ps" class="form-control "value="<?=$wearhouse->ps ? $wearhouse->ps : ''?>"  />
+                    <!-- <input type="text" id=w_name name="w_name" class="form-control" value="<?=$wearhouse->w_name ? $wearhouse->w_name : ''?>" required/> -->
+
+                </div>
+            
+                <label for="mouza" class="col-sm-2 col-form-label">Mouza:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=mouza name="mouza" class="form-control " value="<?=$wearhouse->mouza ? $wearhouse->mouza : ''?>" />
+                
+            </div>
+            </div>
+            <div class="form-group row">
+                <!-- <label for="capacity" class="col-sm-2 col-form-label">Capacity( In MT ):</label>
+                <div class="col-sm-4">
+                    <input type="text" id=capacity name="capacity" class="form-control" value="<?=$wearhouse->capacity ? $wearhouse->capacity : ''?>" />
+
+                </div> -->
+                <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sq.ft.)</label>
+                <div class="col-sm-4">
+                    <input type="text" id=floorarea name="floorarea" class="form-control "value="<?=$wearhouse->floorarea ? $wearhouse->floorarea : ''?>"  />
+
+                </div>
+</div>
+            <div class="form-group row">
+                <label for="capacity" class="col-sm-2 col-form-label">Capacity(IN MT):</label>
                 <div class="col-sm-4">
                     <input type="text" id=capacity name="capacity" class="form-control required"  value="<?=$wearhouse->capacity ? $wearhouse->capacity : ''?>" />
 
@@ -82,7 +109,216 @@
                <input type="text" id=location name="location" class="form-control required"  value="<?=$wearhouse->location ? $wearhouse->location : ''?>" />
                 </div>
             </div>
+            <div class="form-group row">
+                 
+                 <label for="disnrp" class="col-sm-2 col-form-label">DISTANCE FROM NEAREST RAKE POINT:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=disnrp name="disnrp" class="form-control" value="<?=$wearhouse->disnrp ? $wearhouse->disnrp : ''?>" />
+                 </div>
+                 <label for="disfr" class="col-sm-2 col-form-label">DISTANCE FROM ROAD:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=disfr name="disfr" class="form-control " value="<?=$wearhouse->disfr ? $wearhouse->disfr : ''?>"  />
+                 </div>
+             </div>
+             <div class="form-group row">
+                  
+                 <label for="bar" class="col-sm-2 col-form-label">BRAEDTH OF APPROACH ROAD:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=bar name="bar" class="form-control" value="<?=$wearhouse->bar ? $wearhouse->bar : ''?>"  />
+                 </div>
+                 <label for="tar" class="col-sm-2 col-form-label">TYPE OF APP. ROAD:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=tar name="tar" class="form-control " value="<?=$wearhouse->tar ? $wearhouse->tar : ''?>"  />
+                 </div>
+             </div>
+             <div class="form-group row">
+                  
+                 <label for="phc" class="col-sm-2 col-form-label">PHYSICAL CONDITION:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=phc name="phc" class="form-control"  value="<?=$wearhouse->phc ? $wearhouse->phc : ''?>" />
+                 </div>
+                 <label for="eg" class="col-sm-2 col-form-label">ENTRY GATE:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=eg name="eg" class="form-control " value="<?=$wearhouse->eg ? $wearhouse->eg : ''?>"  />
+                 </div>
+             </div>
+             <div class="form-group row">
+                  
+                 <label for="venti" class="col-sm-2 col-form-label">VENTILLATION:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=venti name="venti" class="form-control " value="<?=$wearhouse->venti ? $wearhouse->venti : ''?>"  />
+                 </div>
+                 <label for="ph" class="col-sm-2 col-form-label">PLINTH HEIGHT:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=ph name="ph" class="form-control " value="<?=$wearhouse->ph ? $wearhouse->ph : ''?>"  />
+                 </div>
+             </div>
+             <div class="form-group row">
+                  
+                 <label for="eleccon" class="col-sm-2 col-form-label">CONDITION OF ELECTRICITY:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=eleccon name="eleccon" class="form-control " value="<?=$wearhouse->eleccon ? $wearhouse->eleccon : ''?>"  />
+                 </div>
+                 <label for="iew" class="col-sm-2 col-form-label">INTERNAL/EXTERNAL WIRING:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=iew name="iew" class="form-control " value="<?=$wearhouse->iew ? $wearhouse->iew : ''?>"  />
+                 </div>
+             </div>
+             <div class="form-group row">
+                  
+                 <label for="obm" class="col-sm-2 col-form-label">OFFICE BUILDING MAINTAT:</label>
+                 <div class="col-sm-4">
+ 
+                  
+                <input type="text" id=obm name="obm" class="form-control "  value="<?=$wearhouse->obm ? $wearhouse->obm : ''?>" />
+                 </div>
+ </div>
+ <div class="form-header">
 
+                <h4>Detailed Entry Of Land </h4>
+
+            </div>
+            <div class="form-group row">
+
+                <label for="porcha" class="col-sm-2 col-form-label">Porcha:</label>
+
+                <div class="col-sm-4">
+
+                    <select name="porcha" id="porcha" style="width: 100%;"  class="form-control" >
+
+                        <option value="">Select</option>
+                        <option value="Y">YES</option>
+                        <option value="N">No</option>
+
+                    </select>
+
+                </div>
+
+                <label for="dagty" class="col-sm-2 col-form-label">Daag Type:</label>
+
+                <div class="col-sm-4">
+
+                    <select name="dagty" id="Porcha" style="width: 100%;"  class="form-control" required>
+
+                        <option value="">Select</option>
+                        <option value="C">CS</option>
+                        <option value="R">RS</option>
+                        <option value="L">LR</option>
+                        <!-- <option value="K">KB</option> -->
+                        <option value="N">NA</option>
+                    </select>
+
+                </div>
+</div>
+            <div class="form-group row">
+                <label for="jlno" class="col-sm-2 col-form-label">JL No</label>
+                <div class="col-sm-4">
+                    <input type="text" id=jl name="jl" class="form-control " value="<?=$wearhouse->jlno ? $wearhouse->jlno : ''?>"  />
+
+                </div>
+            
+                <label for="dag" class="col-sm-2 col-form-label">DAAG No.:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=dag name="dag" class="form-control" value="<?=$wearhouse->dag ? $wearhouse->dag : ''?>"  />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="khotian" class="col-sm-2 col-form-label">Khotian No</label>
+                <div class="col-sm-4">
+                    <input type="text" id=khotian name="khotian" class="form-control " value="<?=$wearhouse->khotian ? $wearhouse->khotian : ''?>"  />
+
+                </div>
+            
+                <label for="touzi" class="col-sm-2 col-form-label">Touzi No.:</label>
+                <div class="col-sm-4">
+
+               <input type="text" id=touzi name="touzi" class="form-control " value="<?=$wearhouse->touzi ? $wearhouse->touzi : ''?>"  />
+                </div>
+            </div>
+            <div class="form-group row">
+                            
+                            <label for="areapremises" class="col-sm-2 col-form-label">Area Of Premises( SATAK/ACRE):</label>
+                            <div class="col-sm-4">
+            
+                           <input type="text" id=areapr name="areapr" class="form-control"  value="<?=$wearhouse->areapr ? $wearhouse->areapr : ''?>" />
+                            </div>
+                            <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
+                            <div class="col-sm-4">
+                               
+                                <select name="purpose" class="form-control required" id="purpose" >
+            
+                                    <option value="">Select Purpose</option>
+                                    <?php
+                                    foreach ($purpdtls as $purp) {
+                                    ?>
+                                        <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+                                    <?php
+                                    }
+                                    ?>
+            
+                                </select>
+            
+                        </div>
+                        <div class="form-group row">
+                            <!-- <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
+                            <div class="col-sm-4">
+                                <select name="status" class="form-control" id="status" required>
+                                    <option value="">Select Status</option>
+                                    <?php
+                                    foreach ($gdstat as $gdst) {
+                                    ?>
+                                        <option value="<?php echo $gdst->id; ?>"><?php echo $gdst->gd_status; ?></option>
+                                    <?php
+                                        }
+                                    ?>
+                                </select>
+                           </div> -->
+                        
+                            <!-- <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
+                            <div class="col-sm-4">
+                               
+                                <select name="purpose" class="form-control required" id="purpose" >
+            
+                                    <option value="">Select Purpose</option>
+                                    <?php
+                                    foreach ($purpdtls as $purp) {
+                                    ?>
+                                        <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+                                    <?php
+                                    }
+                                    ?>
+            
+                                </select> -->
+            
+                             </div>
+                        </div>
+                        <div class="form-header">
+
+<h4>Detailed Entry Of Rent </h4>
+
+</div>
             <div class="form-group row">
                 <label for="rent_st_dt" class="col-sm-2 col-form-label">Rent start sate:</label>
                 <div class="col-sm-4">
@@ -108,10 +344,15 @@
             <!-- </div>
             <div class="form-group row"> -->
                 <label for="rate" class="col-sm-2 col-form-label">rate:</label>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <input type="text" id=rate name="rate" class="form-control required" value="<?=$wearhouse->rate ? $wearhouse->rate : ''?>" />
 
                 </div>
+                <!-- <label for="ratesq" class="col-sm-2 col-form-label">Rate( Sq.ft.):</label>
+                <div class="col-sm-2">
+                    <input type="text" id=ratesq name="ratesq" class="form-control required"  />
+
+                </div> -->
             </div>
             <div class="form-group row">
                 <label for="monthly_remt_amt" class="col-sm-2 col-form-label">Monthly rent amount:</label>
@@ -137,9 +378,7 @@
             </div>
           
         </div>
-
-    
-
+             
         <div class="col-md-5 container form-wraper" style="margin-left: 10px;">
 
                 <div class="form-header">
