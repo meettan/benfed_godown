@@ -888,7 +888,11 @@ from (
     }
 
 
-
+    public function f_get_gdn_dtls($frmDt, $toDt)
+    {
+        $query  = $this->db->query("select a.*,b.district_name from  md_wearhouse a ,md_district b where a.br_id=b.district_code");
+        return $query->result();
+    }
 
     public function f_get_purchase_all($frmDt, $toDt)
     {

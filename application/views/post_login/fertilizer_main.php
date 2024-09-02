@@ -294,10 +294,12 @@
                             <i class="fa fa-angle-down"></i>
                         </div> 
                         <div class="dropdown-content">
+                        <a href="<?php echo site_url("fert/rep/godowndtls");?>">Godown Details</a>
 						    <?php if( $this->session->userdata['loggedin']['ho_flag']!="Y"){?>
-                            <!-- <div class="sub-dropdown">
-                               <a href="<?php echo site_url("fert/rep/rateslab");?>">Sale Rate Slab</a>
-                            </div> -->
+                            <div class="sub-dropdown">
+                            <!-- <a href="<?php echo site_url("fert/rep/gddls");?>">Godown Details</a> -->
+                               <!-- <a href="<?php echo site_url("fert/rep/rateslab");?>">Sale Rate Slab</a> -->
+                            </div>
                             <!-- <div class="sub-dropdown">
                                <a class="sub-dropbtn">Stock <i class="fa fa-angle-right" style="float: right;"></i></a> 
                                <div class="sub-dropdown-content">
