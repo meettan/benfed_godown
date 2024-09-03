@@ -122,6 +122,12 @@
                         <th>Rent Status:</th>
                         <th>Utilization Purpose:</th>
                         <th>fire extinguisher</th>
+                      
+                        <th>Rent Duration</th>
+                        <th>Rent start Date</th>
+                        <th>Rent End Date</th>
+                        <th>Monthly Rent Amount</th>
+       
                         
                     </tr>
 
@@ -224,7 +230,19 @@
                                 <td class="report fireext" id="fireext">
                                 <?php echo $gd->fireext; ?> 
                                 </td>
-                                
+                                <td class="report rent_duration" id="rent_duration">
+                                <?php echo $gd->rent_duration; ?> 
+                                </td>
+                                <td class="report rent_st_dt" id="rent_st_dt">
+                                <?php echo $gd->rent_st_dt; ?> 
+                                </td>
+                                <td class="report rent_end_dt" id="rent_end_dt">
+                                <?php echo $gd->rent_end_dt; ?> 
+                                </td>
+                                <td class="report monthly_remt_amt" id="monthly_remt_amt">
+                                <?php echo $gd->monthly_remt_amt; ?> 
+                                </td>
+                               
 
                             </tr>
 
