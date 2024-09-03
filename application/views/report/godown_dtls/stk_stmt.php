@@ -99,16 +99,30 @@
                     <tr>
 
                         <th>Sl No.</th>
-
                         <th>District</th>
                         <th>Name </th>
                         <th>Address</th>
                         <th>Location</th>
-                        <th>Capasity</th>
+                        <th>Capacity</th>
                         <th>Mouja</th>
-                        <th>Dag No</th>
+                        <th>Dag No</th>       
                         <th>Khotian</th>
-
+                        <th>Dag Type</th>
+                        <th>Touzi No.</th>
+                        <th>Floor Area(sq.ft.)</th>
+                        <th>DISTANCE FROM NEAREST RAKE POINT</th>
+                        <th>DISTANCE FROM ROAD:</th>
+                        <th>BRAEDTH OF APPROACH ROAD:</th>
+                        <th>TYPE OF APP. ROAD:</th>
+                        <th>PHYSICAL CONDITION:</th>
+                        <th>CONDITION OF ELECTRICITY:</th>
+                        <th>VENTILLATION:</th>
+                        <th>PLINTH HEIGHT:</th>
+                        <th>INTERNAL/EXTERNAL WIRING:</th>
+                        <th>Rent Status:</th>
+                        <th>Utilization Purpose:</th>
+                        <th>fire extinguisher</th>
+                        
                     </tr>
 
                 </thead>
@@ -164,12 +178,53 @@
                                 <td class="report khotian" id="khotian">
                                 <?php echo $gd->khotian; ?> 
                                 </td>
-                                <!-- <td class="report lclosing" id="lclosing">
-                                   
-                                </td> -->
+                                <td class="report daag_type" id="daag_type">
+                                <?php echo $gd->dagty; ?> 
+                                </td>
+                                <td class="report touzi" id="touzi">
+                                <?php echo $gd->touzi; ?> 
+                                </td>
+                                <td class="report floorarea" id="floorarea">
+                                <?php echo $gd->floorarea; ?> 
+                                </td>
+                                <td class="report disnrp" id="disnrp">
+                                <?php echo $gd->disnrp; ?> 
+                                </td>
+                                <td class="report disfr" id="disfr">
+                                <?php echo $gd->disfr; ?> 
+                                </td>
+                                <td class="report bar" id="bar">
+                                <?php echo $gd->bar; ?> 
+                                </td>
+                                <td class="report tar" id="tar">
+                                <?php echo $gd->tar; ?> 
+                                </td>
+                                <td class="report phc" id="phc">
+                                <?php echo $gd->phc; ?> 
+                                </td>
+                                <td class="report eleccon" id="eleccon">
+                                <?php echo $gd->eleccon; ?> 
+                                </td>
+                                <td class="report venti" id="venti">
+                                <?php echo $gd->venti; ?> 
+                                </td>
 
-
-
+                                <td class="report ph" id="ph">
+                                <?php echo $gd->ph; ?> 
+                                </td>
+                                <td class="report iew" id="iew">
+                                <?php echo $gd->iew; ?> 
+                                </td>
+                                <td class="report status" id="status">
+                                <?php echo $gd->status; ?> 
+                                </td>
+                                <td class="report purpose" id="purpose">
+                                <?php echo $gd->purpose; ?> 
+                                </td>
+                                <td class="report fireext" id="fireext">
+                                <?php echo $gd->fireext; ?> 
+                                </td>
+                                
 
                             </tr>
 

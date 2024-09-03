@@ -890,7 +890,35 @@ from (
 
     public function f_get_gdn_dtls($frmDt, $toDt)
     {
-        $query  = $this->db->query("select a.*,b.district_name from  md_wearhouse a ,md_district b where a.br_id=b.district_code");
+        $query  = $this->db->query("select    
+        a.w_name ,a.w_addrs ,a.location ,a.capacity,a.present_status,
+        CASE a.status
+        WHEN 1 THEN 'Partially'
+        WHEN 2 THEN 'FULLY'
+        WHEN 3 THEN 'NONE'
+        ELSE 'NA'
+        END as status
+        ,
+        a.to_whome ,a.rate,
+        CASE a.purpose
+        WHEN 6 THEN 'Fertilizer'
+        WHEN 7 THEN 'Food Item'
+        ELSE 'NA'
+        END as purpose ,
+        a.rent_duration,
+        a.rent_st_dt ,a.rent_end_dt ,a.monthly_remt_amt,a.from_whome ,a.monthly_rent_amth,a.ratesqh,a.rateh,a.rent_durationh,  
+        a.statush ,a.rent_end_dth,a.rent_st_dth ,a.floorarea ,a.touzi ,a.areapr ,a.khotian ,a.dag ,a.jlno ,a.mouza ,
+        CASE a.dagty
+        WHEN 'C' THEN 'CS'
+        WHEN 'R' THEN 'RS'
+        WHEN 'L' THEN 'LR'
+        WHEN 'K' THEN 'KR'
+        ELSE 'NA'
+        END as dagty,
+         a.porcha ,a.ps, a.obm  ,
+        a.iew ,a.eleccon,a.ph ,a.venti,a.eg ,a.phc,a.tar, a.bar,a.disnrp,a.disfr, a.fireext ,a.remarks ,b.district_name 
+        from  md_wearhouse a ,md_district b 
+        where a.br_id=b.district_code");
         return $query->result();
     }
 
