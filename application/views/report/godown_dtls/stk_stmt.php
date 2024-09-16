@@ -99,17 +99,17 @@
                     <tr>
 
                         <th>Sl No.</th>
-                        <th>District</th>
-                        <th>Name </th>
-                        <th>Address</th>
-                        <th>Location</th>
-                        <th>Capacity</th>
-                        <th>Mouja</th>
-                        <th>Daag No</th>       
+                        <th>DISTRICT</th>
+                        <th>NAME </th>
+                        <th>ADDRESS</th>
+                        <th>LOCATION</th>
+                        <th>CAPACITY</th>
+                        <th>MOUJA</th>
+                        <th>DAAG No</th>       
                         <th>Khotian</th>
-                        <th>Daag Type</th>
-                        <th>Touzi No.</th>
-                        <th>Floor Area(sq.ft.)</th>
+                        <th>DAAG Type</th>
+                        <th>TOUZI No.</th>
+                        <th>FLOOR AREA(sq.ft.)</th>
                         <th>DISTANCE FROM NEAREST RAKE POINT</th>
                         <th>DISTANCE FROM ROAD:</th>
                         <th>BRAEDTH OF APPROACH ROAD:</th>
@@ -120,12 +120,12 @@
                         <th>PLINTH HEIGHT:</th>
                         <th>INTERNAL/EXTERNAL WIRING:</th>
                         <th>RENT STATUS:</th>
-                        <th>Utilization Purpose:</th>
-                        <th>fire extinguisher</th>
-                        <th>Rent Duration</th>
-                        <th>Rent start Date</th>
-                        <th>Rent End Date</th>
-                        <th>Monthly Rent Amount</th>
+                        <th>UTILIZATION PURPOSE:</th>
+                        <th>FIRE EXTINGGUISHER</th>
+                        <th>RENT Duration</th>
+                        <th>Rent START DATE</th>
+                        <th>RENT END DATE</th>
+                        <th>MONTHLY RENT AMOUNT</th>
        
                         
                     </tr>

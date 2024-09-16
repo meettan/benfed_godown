@@ -313,8 +313,8 @@ public function godowndtls(){
 
         $to_dt      =   $_POST['to_date'];
 
-        // $branch     =   $this->session->userdata['loggedin']['branch_id'];
-        // $branch  = $_POST['br'];
+        $branch     =   $this->session->userdata['loggedin']['branch_id'];
+        $branch  = $_POST['br'];
 
         $mth        =  date('n',strtotime($from_dt));
 
@@ -334,7 +334,12 @@ public function godowndtls(){
         $prevdt     =  date('Y-m-d', strtotime('-1 day', strtotime($from_dt)));
 
         $_SESSION['date']    =   date('d/m/Y',strtotime($from_dt)).'-'.date('d/m/Y',strtotime($to_dt));
-         $data['godown']    =   $this->ReportModel->f_get_gdn_dtls($from_dt,$to_dt);
+        if($branch==342){
+            $data['godown']    =   $this->ReportModel->f_get_gdn_dtls($from_dt,$to_dt);  
+        }else{
+            $data['godown']    =   $this->ReportModel->f_get_gdn_dtls_br($from_dt,$to_dt,$branch);  
+        }
+         
 
         // $data['product']     =   $this->ReportModel->f_get_product_list($branch,$opndt);
 
