@@ -39,11 +39,13 @@
 		$selectp             = array("id","purpose");
 		$selectst             = array("id","gd_status");
 		$selecloc = array("id","loc_name");
+		$selecrtye = array("sl_no","road_type");
 
         $data['distDtls']    = $this->FertilizerModel->f_select('md_district',$select,NULL,0);
 		$data['purpdtls']    = $this->FertilizerModel->f_select(' md_purpose',$selectp,NULL,0);
 		$data['gdstat']    = $this->FertilizerModel->f_select(' md_godownstatus',$selectst,NULL,0);
 		$data['locdtls']    = $this->FertilizerModel->f_select(' md_location',$selecloc,NULL,0);
+		$data['rdtype']    = $this->FertilizerModel->f_select(' md_road_type',$selecrtye,NULL,0);
         $select_lastend      = array("ifnull(max(id),0)+1 as sl");
         // $where_lastend       = array("end_yr"=>$fin_id);
         $data['lastend']     = $this->FertilizerModel->f_select('md_wearhouse',$select_lastend,NULL,0);
@@ -96,7 +98,7 @@
 				"eg"			  =>  $this->input->post('eg'),
 				"phc"			  =>  $this->input->post('phc'),
 				"tar"			  =>  $this->input->post('tar'),
-				"bar"	             =>  $this->input->post('bar'),
+				"bar"	          =>  $this->input->post('bar'),
 				"disnrp"		  =>  $this->input->post('disnrp'),
 				"disfr"			  =>  $this->input->post('disfr'),
 				"fireext"		  =>  $this->input->post('fireext'),

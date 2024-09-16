@@ -918,7 +918,7 @@ from (
          a.porcha ,a.ps, a.obm  ,
         a.iew ,a.eleccon,a.ph ,a.venti,a.eg ,a.phc,a.tar, a.bar,a.disnrp,a.disfr, a.fireext ,a.remarks ,b.district_name 
         from  md_wearhouse a ,md_district b 
-        where a.br_id=b.district_code");
+        where a.br_id=b.district_code order by b.district_name ");
         return $query->result();
     }
 

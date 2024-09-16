@@ -62,7 +62,14 @@
                 <div class="col-sm-4">
 
                  
-               <input type="text" id=fireext name="fireext" class="form-control "  />
+               <!-- <input type="text" id=fireext name="fireext" class="form-control "  /> -->
+               <select name="fireext" id="fireext" style="width: 100%;"  class="form-control" required>
+
+<option value="">Select</option>
+<option value="Y">YES</option>
+<option value="N">NO</option>
+
+</select>
                 </div>
             </div>
             <div class="form-group row">
@@ -90,9 +97,20 @@
                 </div>
                 <label for="tar" class="col-sm-2 col-form-label">TYPE OF APP. ROAD:</label>
                 <div class="col-sm-4">
+                <select name="tar" class="form-control required" id="tar" >
 
+                <option value="">Select Road Type</option>
+                <?php
+                foreach ($rdtype as $rtype) {
+                ?>
+                    <option value="<?php echo $rtype->sl_no; ?>"><?php echo $rtype->road_type; ?></option>
+                <?php
+                }
+                ?>
+
+                </select>
                  
-               <input type="text" id=tar name="tar" class="form-control "  />
+               <!-- <input type="text" id=tar name="tar" class="form-control "  /> -->
                 </div>
             </div>
             <div class="form-group row">
@@ -179,8 +197,8 @@
                         <option value="">Select</option>
                         <option value="C">CS</option>
                         <option value="R">RS</option>
-                        <option value="K">LR</option>
-                        <option value="K">KB</option>
+                        <option value="L">LR</option>
+                        <!-- <option value="K">KB</option> -->
                         <option value="N">NA</option>
                     </select>
 
@@ -214,12 +232,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <!-- <label for="floorarea" class="col-sm-2 col-form-label">Floor Area(sq.ft.)</label>
-                <div class="col-sm-4">
-                    <input type="text" id=floorarea name="floorarea" class="form-control "  />
-
-                </div> -->
-            
+                            
                 <label for="areapremises" class="col-sm-2 col-form-label">Area Of Premises( SATAK/ACRE):</label>
                 <div class="col-sm-4">
 
@@ -365,8 +378,7 @@
 
                 </div>
                 
-            <!-- </div>
-            <div class="form-group row"> -->
+            
                 <label for="rent_end_dth" class="col-sm-2 col-form-label">Rent/Lease End Dt:</label>
                 <div class="col-sm-4">
                     <input type="date" id=rent_end_dth name="rent_end_dth" class="form-control required"  />

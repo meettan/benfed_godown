@@ -105,9 +105,9 @@
                         <th>Location</th>
                         <th>Capacity</th>
                         <th>Mouja</th>
-                        <th>Dag No</th>       
+                        <th>Daag No</th>       
                         <th>Khotian</th>
-                        <th>Dag Type</th>
+                        <th>Daag Type</th>
                         <th>Touzi No.</th>
                         <th>Floor Area(sq.ft.)</th>
                         <th>DISTANCE FROM NEAREST RAKE POINT</th>
@@ -119,10 +119,9 @@
                         <th>VENTILLATION:</th>
                         <th>PLINTH HEIGHT:</th>
                         <th>INTERNAL/EXTERNAL WIRING:</th>
-                        <th>Rent Status:</th>
+                        <th>RENT STATUS:</th>
                         <th>Utilization Purpose:</th>
                         <th>fire extinguisher</th>
-                      
                         <th>Rent Duration</th>
                         <th>Rent start Date</th>
                         <th>Rent End Date</th>
