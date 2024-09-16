@@ -21,9 +21,9 @@
 		$branch_id  = $this->session->userdata['loggedin']['branch_id'];
 		$where               = array("br_id"=>$branch_id);
 if($branch_id==342){
-	$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,$where,0);
-}else{
 	$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,NULL,0);
+}else{
+	$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,$where,0);
 }
 		
 		$this->load->view('post_login/fertilizer_main');
