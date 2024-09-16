@@ -250,7 +250,7 @@
                             <a href="<?php echo site_url("adv/company_advance_pending");?>">Pending Advance To Company</a> -->
 
                             <div class="sub-dropdown">
-                            <a href="<?php echo site_url("uplfl");?>">File Upload</a>
+                            <!-- <a href="<?php echo site_url("uplfl");?>">File Upload</a> -->
                             <a href="<?php echo site_url("godown/godown/");?>">Godown Details</a>
                               
                             </div>
