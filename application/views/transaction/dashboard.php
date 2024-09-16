@@ -69,12 +69,9 @@
                 <tfoot>
 
                     <tr>
-                        <th>Company ID</th>
-
-                        <th>Company Name</th>
-
-                        <th>GSTIN NO</th>
-
+                    <th>Sl.No.</th>
+                        <th>Godown Name</th>
+                        <th>Godown Address.</th>
             			<th>Edit</th>
                     </tr>
                 
