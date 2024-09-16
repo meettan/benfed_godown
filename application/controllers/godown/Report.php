@@ -314,8 +314,9 @@ public function godowndtls(){
         $to_dt      =   $_POST['to_date'];
 
         $branch     =   $this->session->userdata['loggedin']['branch_id'];
-        $branch  = $_POST['br'];
-
+        //$branch  = $_POST['br'];
+        // print_r( $branch);
+        // die();
         $mth        =  date('n',strtotime($from_dt));
 
         $yr         =  date('Y',strtotime($from_dt));
