@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Model {
 
-    public function f_get_particulars($table_name, $select=NULL,$where, $flag) {
+    public function f_get_particulars($table_name, $select=NULL,$where=NULL, $flag=NULL) {
 
         if(isset($select)) {
 

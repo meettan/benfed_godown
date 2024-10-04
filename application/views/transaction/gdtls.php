@@ -8,22 +8,59 @@
             </div>
           
             <div class="form-group row">
-
                 <label for="yr" class="col-sm-2 col-form-label">WareHouse Name:</label>
                 <div class="col-sm-10">
-                   
-
                     <input type="text" id=w_name name="w_name" class="form-control"  required/>
-
                 </div>
-                </div>
-                <div class="form-group row">
+            </div>
+            <div class="form-group row">
+                 <label for="loc" class="col-sm-2 col-form-label">Type:</label>
+                 <div class="col-sm-10">
+                        <select name="type" class="form-control" id="type"  required>
+                            <option value="">Select TYPE OF GODOWN</option>
+                            <?php
+                            foreach ($goodowntype as $type) {
+                            ?>
+                            <option value="<?php echo $type->id; ?>"><?php echo $type->category; ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                 </div>      
+            </div>
+            <div class="form-group row">
+                 <label for="conditions" class="col-sm-2 col-form-label">Condition</label>
+                 <div class="col-sm-4">
+                      <select name="conditions" id="conditions"   class="form-control" required>
+                        <option value="">Select Condition</option>
+                        <?php
+                            foreach ($conditions as $cond) {
+                            ?>
+                            <option value="<?php echo $cond->condition_id; ?>"><?php echo $cond->godw_condition; ?></option>
+                            <?php
+                            }
+                            ?>
+                     </select>
+                 </div>
+                 <label for="conditions" class="col-sm-2 col-form-label">Present Status</label>
+                 <div class="col-sm-4">
+                      <select name="present_status" id="present_status"   class="form-control" required>
+                        <option value="">Select Status</option>
+                        <?php
+                            foreach ($pstatus as $ps) {
+                            ?>
+                            <option value="<?php echo $ps->pres_status_id; ?>"><?php echo $ps->pres_status; ?></option>
+                            <?php
+                            }
+                            ?>
+                     </select>
+                 </div>
+            </div>
+             <div class="form-group row">
                 <label for="w_addrs" class="col-sm-2 col-form-label">Address Including Pin:</label>
                 <div class="col-sm-10">
                 <textarea id=w_addrs name="w_addrs" class="form-control"></textarea>
-
                 </div>
-
             </div>
             <div class="form-group row">
                 <label for="ps" class="col-sm-2 col-form-label">PS</label>

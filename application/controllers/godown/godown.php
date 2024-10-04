@@ -20,11 +20,11 @@
 	public function index(){
 		$branch_id  = $this->session->userdata['loggedin']['branch_id'];
 		$where               = array("br_id"=>$branch_id);
-if($branch_id==342){
-	$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,NULL,0);
-}else{
-	$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,$where,0);
-}
+			if($branch_id==342){
+				$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,NULL,0);
+			}else{
+				$data['data']   = $this->FertilizerModel->f_select('md_wearhouse',NULL,$where,0);
+			}
 		
 		$this->load->view('post_login/fertilizer_main');
 		$this->load->view("transaction/dashboard",$data);
@@ -35,7 +35,6 @@ if($branch_id==342){
     {
       
         $fin_id              = $this->session->userdata['loggedin']['fin_id'];
-
         $where               = array("sl_no"=>$fin_id);
         $data['finyrdtls']   = $this->FertilizerModel->f_select('md_fin_year',NULL,$where,1);
        
@@ -44,12 +43,14 @@ if($branch_id==342){
 		$selectst             = array("id","gd_status");
 		$selecloc = array("id","loc_name");
 		$selecrtye = array("sl_no","road_type");
-
+		$data['goodowntype'] = $this->FertilizerModel->f_select('md_godown_type',NULL,NULL,0);
+		$data['conditions'] = $this->FertilizerModel->f_select('md_condition',NULL,NULL,0);
+		$data['pstatus'] = $this->FertilizerModel->f_select('md_present_status',NULL,NULL,0);
         $data['distDtls']    = $this->FertilizerModel->f_select('md_district',$select,NULL,0);
-		$data['purpdtls']    = $this->FertilizerModel->f_select(' md_purpose',$selectp,NULL,0);
+		$data['purpdtls']    = $this->FertilizerModel->f_select('md_purpose',$selectp,NULL,0);
 		$data['gdstat']    = $this->FertilizerModel->f_select(' md_godownstatus',$selectst,NULL,0);
-		$data['locdtls']    = $this->FertilizerModel->f_select(' md_location',$selecloc,NULL,0);
-		$data['rdtype']    = $this->FertilizerModel->f_select(' md_road_type',$selecrtye,NULL,0);
+		$data['locdtls']    = $this->FertilizerModel->f_select('md_location',$selecloc,NULL,0);
+		$data['rdtype']    = $this->FertilizerModel->f_select('md_road_type',$selecrtye,NULL,0);
         $select_lastend      = array("ifnull(max(id),0)+1 as sl");
         // $where_lastend       = array("end_yr"=>$fin_id);
         $data['lastend']     = $this->FertilizerModel->f_select('md_wearhouse',$select_lastend,NULL,0);
@@ -64,6 +65,9 @@ if($branch_id==342){
             
             $data_array = array(
                 "w_name"         =>  $this->input->post('w_name'),
+				"type"           =>  $this->input->post('type'),
+				"conditions"     =>  $this->input->post('conditions'),
+				"present_status" =>  $this->input->post('present_status'),
                 "w_addrs"        =>  $this->input->post('w_addrs'),
                 "status"         =>  $this->input->post('status'),
                 "purpose"        =>  $this->input->post('purpose'),
@@ -107,7 +111,7 @@ if($branch_id==342){
 				"disfr"			  =>  $this->input->post('disfr'),
 				"fireext"		  =>  $this->input->post('fireext'),
 				"br_id"           =>  $this->session->userdata['loggedin']['branch_id'],
-                "created_by"      =>  $this->session->userdata('loggedin')['user_id'],
+                "created_by"      =>  $this->session->userdata['loggedin']['user_id'],
                 "created_at"      =>  date('Y-m-d H:i:s')
             );
            // $dist_id=$this->input->post('dist');
@@ -178,7 +182,7 @@ if($branch_id==342){
 				}
 		
 		    }
-	     }
+	    }
 
             // $this->inser_mntEnd($data_array);
             return redirect('godown/godown/');
@@ -198,20 +202,13 @@ if($branch_id==342){
 		if($_SERVER['REQUEST_METHOD'] == "POST") {
 	
 			$data_array = array(
-	
-					"soc_id"     			=>  $this->input->post('soc_id'),
-					"soc_name"   			=>  $this->input->post('soc_name'),
-					"soc_add"    			=>  $this->input->post('soc_add'),
-					"gstin"					=> $this->input->post('gstin'),
-					"mfms" 					=> $this->input->post('mfms'),
-					"retailmfms" 			=> $this->input->post('retailmfms'),
-					"email"         		=>  $this->input->post('email'),
-					"pan"                   => $this->input->post('pan'),
-					"ph_no"        			=>  $this->input->post('ph_no'),
-					"stock_point_flag"      =>  $this->input->post('stock_point_flag'),
-					"buffer_flag"      		=>  $this->input->post('buffer_flag'),
-					"status"   				=>  $this->input->post('status'),
-				"purpose"        =>  $this->input->post('purpose'),
+				"w_name"         =>  $this->input->post('w_name'),
+				"type"           =>  $this->input->post('type'),
+				"conditions"     =>  $this->input->post('conditions'),
+				"present_status" =>  $this->input->post('present_status'),
+                "w_addrs"        =>  $this->input->post('w_addrs'),
+                "status"         =>  $this->input->post('status'),
+                "purpose"        =>  $this->input->post('purpose'),
 				"capacity"       =>  $this->input->post('capacity'),
                 "location"       =>  $this->input->post('location'),
 				"rent_st_dt"     =>  $this->input->post('rent_st_dt'),
@@ -251,16 +248,72 @@ if($branch_id==342){
 				"disnrp"		  =>  $this->input->post('disnrp'),
 				"disfr"			  =>  $this->input->post('disfr'),
 				"fireext"		  =>  $this->input->post('fireext'),
-					"modified_by"  			=>  $this->session->userdata['loggedin']['user_name']
+				"br_id"           =>  $this->session->userdata['loggedin']['branch_id'],
+                "modified_by"     =>  $this->session->userdata['loggedin']['user_id'],
+                "modified_at"     =>  date('Y-m-d H:i:s')
 				);
 	
 			$where = array(
-					"soc_id" => $this->input->post('soc_id')
+					"id" => $this->input->post('id')
 			);
+			$this->FertilizerModel->f_edit('md_wearhouse', $data_array, $where);
+			$wearhouse_id = $this->input->post('id');
+			$name = $this->input->post('name');
+		$file      = $_FILES["fileToUpload"]["name"];
+		$error = '';
+		$error_count = 0 ;
+		$success_count = 0;
+		$target_dir = './uploads/godown_doc/';
+		
+        if(count($_FILES["fileToUpload"])>0){
+		    for($key=0;$key<sizeof($file);$key++){
+				$filename=$_FILES["fileToUpload"]["name"][$key];
+				//$extension=end(explode(".", $filename));
+				$tmp = explode('.', $filename);
+				$extension = end($tmp);
+				$newfilename=$wearhouse_id.$key.time().".".$extension;
+				//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"][$key]);
+				$target_file = $target_dir . $newfilename;
+				$uploadOk = 1;
+				$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+			
+						// 1000000 => 1MB
+				if ($_FILES["fileToUpload"]["size"][$key] > 2000000) {
+				$error .= "Sorry, your file is too large.";
+				$uploadOk = 0;
+				}
+				//Allow certain file formats
+				if( $imageFileType != "pdf"){
+				//&& $imageFileType != "xlsx" && $imageFileType != "txt" && $imageFileType != "docx"
+				//echo "Sorry, only JPG, JPEG, PNG  files are allowed.";
+				$error .= "PDF  files are allowed.";
+				$uploadOk = 0;
+				}
+           
+			    // Check if $uploadOk is set to 0 by an error
+				if ($uploadOk == 1) {
+					if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$key], $target_file)) {
+						$data_array = array(
+							'wearhouse_id'  => $this->input->post('id'),
+							'file_name'     => $name[$key],
+							'document'   => $newfilename,
+							'created_by'    => $this->session->userdata('loggedin')['user_id'],
+							'created_at'    => date("Y-m-d h:i:s")
+						);
+						$id = $this->FertilizerModel->f_insert('td_wearhouse_file',$data_array);
+						$success_count++;
+
+					}else{
+						$error_count++;
+					}
+				}
+		
+		    }
+	    }
 			 
-		//	$this->FertilizerModel->f_edit('mm_ferti_soc', $data_array, $where);
-		//	$this->session->set_flashdata('msg', 'Successfully Updated');
-		//	redirect('customer');
+	        
+			$this->session->set_flashdata('msg', 'Successfully Updated');
+			redirect('godown/godown/');
 	
 		}else{
 			$selectp             = array("id","purpose");
@@ -269,6 +322,9 @@ if($branch_id==342){
 			$data['purpdtls']    = $this->FertilizerModel->f_select('md_purpose',$selectp,NULL,0);
 		    $data['gdstat']    = $this->FertilizerModel->f_select('md_godownstatus',$selectst,NULL,0);
 		    $data['locdtls']    = $this->FertilizerModel->f_select('md_location',$selecloc,NULL,0);
+			$data['goodowntype'] = $this->FertilizerModel->f_select('md_godown_type',NULL,NULL,0);
+			$data['conditions'] = $this->FertilizerModel->f_select('md_condition',NULL,NULL,0);
+			$data['pstatus'] = $this->FertilizerModel->f_select('md_present_status',NULL,NULL,0);
 			$select = array("*");
 			$where = array("id" => $this->input->get('id'));
 			$data['wearhouse'] = $this->FertilizerModel->f_select("md_wearhouse",$select,$where,1);

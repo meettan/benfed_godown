@@ -1,5 +1,5 @@
 <div class="wraper">
-    <!-- <form method="POST" id="product" action="<?php //echo site_url("godown/godown/godowndtls") ?>" enctype='multipart/form-data'> -->
+    <form method="POST" id="product" action="<?php echo site_url("godown/godown/editgodown") ?>" enctype='multipart/form-data'>
         <div class="col-md-6 container form-wraper" style="margin-bottom: 10px!important;" >
             <div class="form-header">
 
@@ -8,20 +8,60 @@
             </div>
 
             <div class="form-group row">
-
+                    <input type="hidden" name="id" value="<?=$wearhouse->id?>" >
                 <label for="yr" class="col-sm-2 col-form-label">WareHouse Name:</label>
                 <div class="col-sm-10">
-                   
-
                     <input type="text" id=w_name name="w_name" class="form-control" value="<?=$wearhouse->w_name ? $wearhouse->w_name : ''?>" required/>
-
                 </div>
+                </div>
+
+                <div class="form-group row">
+                 <label for="loc" class="col-sm-2 col-form-label">Type:</label>
+                        <div class="col-sm-10">
+                                <select name="type" class="form-control" id="type"  required>
+                                    <option value="">Select TYPE OF GODOWN</option>
+                                    <?php
+                                    foreach ($goodowntype as $type) {
+                                    ?>
+                                    <option value="<?php echo $type->id; ?>" <?=($type->id == $wearhouse->type) ? 'selected' : ''?>><?php echo $type->category; ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+                        </div>      
                 </div>
                 <div class="form-group row">
+                 <label for="conditions" class="col-sm-2 col-form-label">Condition</label>
+                 <div class="col-sm-4">
+                      <select name="conditions" id="conditions"   class="form-control" required>
+                        <option value="">Select Condition</option>
+                        <?php
+                            foreach ($conditions as $cond) {
+                            ?>
+                            <option value="<?php echo $cond->condition_id; ?>" <?=($cond->condition_id == $wearhouse->conditions) ? 'selected' : ''?>><?php echo $cond->godw_condition; ?></option>
+                            <?php
+                            }
+                            ?>
+                     </select>
+                 </div>
+                 <label for="conditions" class="col-sm-2 col-form-label">Present Status</label>
+                 <div class="col-sm-4">
+                      <select name="present_status" id="present_status"   class="form-control" required>
+                        <option value="">Select Status</option>
+                        <?php
+                            foreach ($pstatus as $ps) {
+                            ?>
+                            <option value="<?php echo $ps->pres_status_id; ?>" <?=($ps->pres_status_id == $wearhouse->present_status) ? 'selected' : ''?>><?php echo $ps->pres_status; ?></option>
+                            <?php
+                            }
+                            ?>
+                     </select>
+                 </div>
+            </div>
+            <div class="form-group row">
                 <label for="w_addrs" class="col-sm-2 col-form-label">WareHouse Address:</label>
                 <div class="col-sm-10">
                 <textarea id=w_addrs name="w_addrs" class="form-control"><?=$wearhouse->w_addrs ? $wearhouse->w_addrs : ''?></textarea>
-
                 </div>
 
             </div>
@@ -221,11 +261,11 @@
                     <select name="dagty" id="Porcha" style="width: 100%;"  class="form-control" required>
 
                         <option value="">Select</option>
-                        <option value="C">CS</option>
-                        <option value="R">RS</option>
-                        <option value="L">LR</option>
+                        <option value="C" <?=("C" == $wearhouse->dagty) ? 'selected' : ''?>>CS</option>
+                        <option value="R" <?=("R" == $wearhouse->dagty) ? 'selected' : ''?>>RS</option>
+                        <option value="L" <?=("L" == $wearhouse->dagty) ? 'selected' : ''?>>LR</option>
                         <!-- <option value="K">KB</option> -->
-                        <option value="N">NA</option>
+                        <option value="N" <?=("N" == $wearhouse->dagty) ? 'selected' : ''?>>NA</option>
                     </select>
 
                 </div>
@@ -401,12 +441,17 @@
                         
                      </tr>
                     <?php } ?>
+                    <tr>
+                        <td><input type="text" name="name[]" class="form-control"></td>
+                        <td><input type="file" name="fileToUpload[]" class="form-control doc"></td>
+                        <td><button type="button" class="btn btn-success addAnotherrow"><i class="fa fa-plus"></i></button></td>
+                    </tr>
                 </tbody>
                 </table>
         </div>
 
         <div class="col-md-12">
-        <!-- <input type="submit" id="submit" class="btn btn-info" value="Save" /> -->
+        <input type="submit" id="submit" class="btn btn-info" value="Save" />
 
         </div>
     </form>
