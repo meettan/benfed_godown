@@ -9,7 +9,21 @@
         }
 		
 		// }
-
+        public function f_getvendor(){
+		    // $auth_key = $this->input->post('auth_key');
+            $sql = $this->db->query("select sum(tot_vendor)tot_vendor,sum(tot_branch)tot_branch,sum(tot_soc)tot_soc
+            from(SELECT count(*)tot_vendor,0 tot_branch,0 tot_soc
+            from mm_company_dtls
+            union 
+            select 0,count(district_code) tot_banch,0  tot_soc
+             from md_district
+             UNION 
+             select 0,0,count(soc_id)
+             from  mm_ferti_soc)a");
+			
+            $data['value'] =$sql->result();;
+            echo json_encode($data);
+        }
         function get_api_cancel(){
             $irn = $this->input->post('irn');
             $CnlRsn = $this->input->post('CnlRsn');
