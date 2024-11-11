@@ -6,8 +6,24 @@
 		parent::__construct();	
 		$this->load->model('SaleModel');
         $this->load->model('irncancelmodel');
+        $this->set_cors_headers();
         }
-		
+		private function set_cors_headers() {
+            // Allow all domains (for development, you can restrict it to specific domains later)
+            header("Access-Control-Allow-Origin: *"); // or specify domain like 'http://localhost:3000'
+            header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+            header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+    
+            // Allow credentials (for cookies or authorization headers)
+            header("Access-Control-Allow-Credentials: true");
+    
+            // Handle preflight requests (OPTIONS)
+            if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+                http_response_code(200);
+                exit();
+            }
+        }
+    
 		// }
         public function f_getvendor(){
 		    // $auth_key = $this->input->post('auth_key');
