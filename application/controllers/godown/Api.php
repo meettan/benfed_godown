@@ -37,7 +37,42 @@
              select 0,0,count(soc_id)
              from  mm_ferti_soc)a");
 			
-            $data['value'] =$sql->result();;
+            $data['value'] =$sql->result();
+            echo json_encode($data);
+        }
+        public function f_stock_api(){
+        // $curr_dt=date("Y-m-d");
+        // $curr_mnth=date('n',strtotime($curr_dt));
+        // $curr_yr=date('Y',strtotime($from_dt));
+        // echo $curr_dt;
+        // echo  $curr_mnth;
+        // echo  $curr_yr;
+        // die();
+       
+        // if($curr_yr > 3){
+
+        //     $year = $curr_yr;
+
+        // }else{
+
+        //  $year = $curr_yr - 1;
+        // }
+
+         //$opndt      =  date($year.'-04-01');
+            $sql = $this->db->query("select district_name,comp_name,prod_desc,stock_qty
+            from(select f.district_name  district_name, e.prod_desc prod_desc,d.comp_name comp_name, b.ro_no, b.comp_id,b.br,b.prod_id,b.qty-sum(c.qty)stock_qty
+            from td_purchase b ,td_sale c,mm_company_dtls d,mm_product e,md_district f
+            where b.ro_no=c.sale_ro 
+            and b.comp_id=d.comp_id
+                 and b.br=f.district_code
+            and b.prod_id=e.prod_id
+            and b.prod_id=c.prod_id
+            and b.ro_dt >='2024-04-01'
+            group by b.comp_id,b.br,b.prod_id ,b.ro_no  ,d.comp_name,e.prod_desc
+            )x
+            where stock_qty>0");
+            
+            $data['value'] =$sql->result();
             echo json_encode($data);
         }
         function get_api_cancel(){
