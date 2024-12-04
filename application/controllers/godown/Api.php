@@ -61,7 +61,7 @@
          //$opndt      =  date($year.'-04-01');
             $sql = $this->db->query("select district_name,comp_name,prod_desc,stock_qty
             from(select f.district_name  district_name, e.prod_desc prod_desc,d.comp_name comp_name, b.ro_no, b.comp_id,b.br,b.prod_id,b.qty-sum(c.qty)stock_qty
-            from v_td_purchase b ,v_td_sale c,mm_company_dtls d,mm_product e,md_district f
+            from v_td_purchase b ,V_TD_SALE c,mm_company_dtls d,mm_product e,md_district f
             where b.ro_no=c.sale_ro 
             and b.comp_id=d.comp_id
                  and b.br=f.district_code
