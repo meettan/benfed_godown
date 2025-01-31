@@ -146,7 +146,7 @@
                 }
             ?>
                </select> -->
-               <input type="text" id=location name="location" class="form-control required"  value="<?=$wearhouse->location ? $wearhouse->location : ''?>" />
+               <input type="text" id=location name="location" class="form-control required"  value="<?=$wearhouse->location ? $wearhouse->location : ''?>" readonly/>
                 </div>
             </div>
             <div class="form-group row">
