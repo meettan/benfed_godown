@@ -89,7 +89,8 @@
             <?php
             foreach ($purpdtls as $purp) {
             ?>
-                <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+                <!-- <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option> -->
+                <option value="<?php echo $purp->id; ?>" <?=($purp->id == $wearhouse->purpose) ? 'selected' : ''?>><?php echo $purp->purpose; ?></option>
             <?php
             }
             ?>
