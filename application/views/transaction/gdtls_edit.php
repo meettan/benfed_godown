@@ -83,18 +83,19 @@
                 <label for="purpose" class="col-sm-2 col-form-label">Purpose:</label>
                 <div class="col-sm-4">
                    
-                    <select name="purpose" class="form-control required" id="purpose" >
+                <select name="purpose" class="form-control required" id="purpose" >
+            
+            <option value="">Select Purpose</option>
+            <?php
+            foreach ($purpdtls as $purp) {
+            ?>
+                <option value="<?php echo $purp->id; ?>"><?php echo $purp->purpose; ?></option>
+            <?php
+            }
+            ?>
 
-                        <option value="">Select Purpose</option>
-                        <?php
-                        foreach ($purpdtls as $purp) {
-                        ?>
-                            <option value="<?php echo $purp->id; ?>" <?=($purp->id == $wearhouse->purpose) ? 'selected' : ''?>><?php echo $purp->purpose; ?></option>
-                        <?php
-                        }
-                        ?>
+        </select>
 
-                    </select>
 
                  </div>
             </div>
@@ -304,7 +305,7 @@
             
                            <input type="text" id=areapr name="areapr" class="form-control"  value="<?=$wearhouse->areapr ? $wearhouse->areapr : ''?>" />
                             </div>
-                            <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
+                            <!-- <label for="purpose" class="col-sm-2 col-form-label">Utilization Purpose:</label>
                             <div class="col-sm-4">
                                
                                 <select name="purpose" class="form-control required" id="purpose" >
@@ -320,7 +321,7 @@
             
                                 </select>
             
-                        </div>
+                        </div> -->
                         <div class="form-group row">
                             <!-- <label for="onholdv" class="col-sm-2 col-form-label">Rent Status:</label>
                             <div class="col-sm-4">
