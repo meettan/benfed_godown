@@ -41,9 +41,9 @@
             echo json_encode($data);
         }
         public function f_stock_api(){
-        // $curr_dt=date("Y-m-d");
+         $curr_dt=date("Y-m-d");
         // $curr_mnth=date('n',strtotime($curr_dt));
-        // $curr_yr=date('Y',strtotime($from_dt));
+         $curr_yr=date('Y',strtotime($curr_dt));
         // echo $curr_dt;
         // echo  $curr_mnth;
         // echo  $curr_yr;
@@ -58,7 +58,7 @@
         //  $year = $curr_yr - 1;
         // }
 
-         //$opndt      =  date($year.'-04-01');
+         //$opndt      =  date($curr_yr.'-04-01');
             $sql = $this->db->query("select district_name,comp_name,prod_desc,stock_qty
             from(select f.district_name  district_name, e.prod_desc prod_desc,d.comp_name comp_name, b.ro_no, b.comp_id,b.br,b.prod_id,b.qty-sum(c.qty)stock_qty
             from v_td_purchase b ,V_TD_SALE c,mm_company_dtls d,mm_product e,md_district f
@@ -75,6 +75,25 @@
             $data['value'] =$sql->result();
             echo json_encode($data);
         }
+        public function f_dist_api(){
+            $sql = $this->db->query("select district_code,district_name 
+            from md_district");
+            $data['value'] =$sql->result();
+               echo json_encode($data);
+        }
+        public function f_godown_api(){
+            $json_data = file_get_contents("php://input");
+           $data = json_decode($json_data, true);
+           $dist_id = $data['dist_id'];
+                       
+               $sql = $this->db->query("select distinct a.w_name,a.w_addrs,b.district_name,c.pres_status 
+               from md_wearhouse a ,md_district b ,md_present_status c 
+               where a.br_id=b.district_code and a.present_status=c.pres_status_id 
+               and br_id=$dist_id");
+               
+               $data['value'] =$sql->result();
+               echo json_encode($data);
+           }
         function get_api_cancel(){
             $irn = $this->input->post('irn');
             $CnlRsn = $this->input->post('CnlRsn');
