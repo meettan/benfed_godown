@@ -76,6 +76,8 @@
             echo json_encode($data);
         }
         public function f_dist_api(){
+            $json_data = file_get_contents("php://input");
+            $data = json_decode($json_data, true);
             $sql = $this->db->query("select district_code,district_name 
             from md_district");
             $data['value'] =$sql->result();
