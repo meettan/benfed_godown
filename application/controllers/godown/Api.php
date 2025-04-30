@@ -60,17 +60,11 @@
 
          //$opndt      =  date($curr_yr.'-04-01');
             $sql = $this->db->query("select district_name,comp_name,prod_desc,stock_qty
-            from(select f.district_name  district_name, e.prod_desc prod_desc,d.comp_name comp_name, b.ro_no, b.comp_id,b.br,b.prod_id,b.qty-sum(c.qty)stock_qty
-            from v_td_purchase b ,V_TD_SALE c,mm_company_dtls d,mm_product e,md_district f
-            where b.ro_no=c.sale_ro 
-            and b.comp_id=d.comp_id
-                 and b.br=f.district_code
-            and b.prod_id=e.prod_id
-            and b.prod_id=c.prod_id
-            and b.ro_dt >='2024-04-01'
-            group by b.comp_id,b.br,b.prod_id ,b.ro_no  ,d.comp_name,e.prod_desc
-            )x
-            where stock_qty>0");
+            from(select ''  district_name, e.prod_desc prod_desc,d.comp_name comp_name, d.comp_id,e.prod_id,0 stock_qty
+            from mm_company_dtls d,mm_product e
+            where  d.comp_id=e.company
+                 group by d.comp_id,e.prod_id ,d.comp_name,e.prod_desc
+            )x");
             
             $data['value'] =$sql->result();
             echo json_encode($data);
