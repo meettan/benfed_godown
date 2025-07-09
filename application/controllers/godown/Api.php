@@ -84,7 +84,7 @@
                        
                $sql = $this->db->query("select distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status
                from md_wearhouse a ,md_branch b ,md_present_status c 
-               where a.br_id=b.district_code and a.present_status=c.pres_status_id 
+               where a.br_id=b.id and a.present_status=c.pres_status_id 
                and br_id=$dist_id");
             //    $sql = $this->db->query("select  distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status ,a.capacity,b.br_manager,b.contact_no,,e.purpose details
             //    from md_wearhouse a ,md_branch b ,md_present_status c,md_purpose e
