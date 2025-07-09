@@ -82,16 +82,16 @@
            $data = json_decode($json_data, true);
            $dist_id = $data['dist_id'];
                        
-            //    $sql = $this->db->query("select distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status ,a.capacity,
-            //    from md_wearhouse a ,md_branch b ,md_present_status c 
-            //    where a.br_id=b.district_code and a.present_status=c.pres_status_id 
-            //    and br_id=$dist_id");
-               $sql = $this->db->query("select  distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status ,a.capacity,b.br_manager,b.contact_no,,e.purpose details
-               from md_wearhouse a ,md_branch b ,md_present_status c,md_purpose e
-               where a.br_id=b.id 
-               and a.purpose=e.id
-               and a.present_status=c.pres_status_id 
-               and b.id=$dist_id");
+               $sql = $this->db->query("select distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status ,a.capacity,
+               from md_wearhouse a ,md_branch b ,md_present_status c 
+               where a.br_id=b.district_code and a.present_status=c.pres_status_id 
+               and br_id=$dist_id");
+            //    $sql = $this->db->query("select  distinct a.w_name,a.w_addrs,b.branch_name district_name,c.pres_status ,a.capacity,b.br_manager,b.contact_no,,e.purpose details
+            //    from md_wearhouse a ,md_branch b ,md_present_status c,md_purpose e
+            //    where a.br_id=b.id 
+            //    and a.purpose=e.id
+            //    and a.present_status=c.pres_status_id 
+            //    and b.id=$dist_id");
 
                $data['value'] =$sql->result();
                echo json_encode($data);
